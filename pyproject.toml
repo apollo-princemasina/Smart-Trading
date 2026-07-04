@@ -1,0 +1,31 @@
+[project]
+name = "eurusd-ict-ml-system"
+version = "0.1.0"
+description = "EURUSD ICT trading machine learning system"
+authors = [ { name = "Research and Innovation" } ]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas",
+  "numpy",
+  "scikit-learn",
+  "xgboost",
+  "lightgbm",
+  "fastapi",
+  "uvicorn",
+  "sqlalchemy",
+  "pydantic",
+  "python-dotenv",
+  "joblib",
+  "pyyaml",
+  "pytest",
+  "matplotlib",
+  "seaborn",
+  "requests",
+  "pyarrow",
+  "tqdm"
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

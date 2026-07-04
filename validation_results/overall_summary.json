@@ -1,0 +1,85 @@
+{
+  "task_type": "classification",
+  "n_windows": 6,
+  "n_models": 4,
+  "target_column": "direction_1b",
+  "symbol": "EURUSD",
+  "models": [
+    {
+      "model_name": "xgboost",
+      "acceptance_status": "needs_improvement",
+      "ranking_score": 0.780202,
+      "stability_score": 0.9368854340157933,
+      "robustness_score": 0.6021684020865951,
+      "generalization_score": 0.9220179198145103,
+      "primary_metric_mean": 0.5055022750228156,
+      "primary_metric_std": 0.027396559994086578,
+      "n_windows": 6,
+      "mean_inference_ms": 0.04669271758781834,
+      "acceptance_reasons": [
+        "Overfitting detected (train-test gap=0.2136)"
+      ]
+    },
+    {
+      "model_name": "lightgbm",
+      "acceptance_status": "needs_improvement",
+      "ranking_score": 0.768742,
+      "stability_score": 0.9359653362330573,
+      "robustness_score": 0.6005224912357109,
+      "generalization_score": 0.8827782618746675,
+      "primary_metric_mean": 0.4896973399285572,
+      "primary_metric_std": 0.03293985384385754,
+      "n_windows": 6,
+      "mean_inference_ms": 0.24741075666169732,
+      "acceptance_reasons": [
+        "Overfitting detected (train-test gap=0.3383)"
+      ]
+    },
+    {
+      "model_name": "random_forest",
+      "acceptance_status": "needs_improvement",
+      "ranking_score": 0.736607,
+      "stability_score": 0.9143972137349037,
+      "robustness_score": 0.5604399967857521,
+      "generalization_score": 0.8518288594085331,
+      "primary_metric_mean": 0.3978052080828704,
+      "primary_metric_std": 0.04718837764358621,
+      "n_windows": 6,
+      "mean_inference_ms": 0.15358760603082813,
+      "acceptance_reasons": [
+        "Overfitting detected (train-test gap=0.3982)"
+      ]
+    },
+    {
+      "model_name": "extra_trees",
+      "acceptance_status": "needs_improvement",
+      "ranking_score": 0.73301,
+      "stability_score": 0.9309043893619002,
+      "robustness_score": 0.5463629713089933,
+      "generalization_score": 0.8676904727863208,
+      "primary_metric_mean": 0.35586933133202886,
+      "primary_metric_std": 0.025493312248988667,
+      "n_windows": 6,
+      "mean_inference_ms": 0.15852795427875974,
+      "acceptance_reasons": [
+        "Overfitting detected (train-test gap=0.3565)"
+      ]
+    }
+  ],
+  "ranked_models": [
+    "xgboost",
+    "lightgbm",
+    "random_forest",
+    "extra_trees"
+  ],
+  "best_model": "xgboost",
+  "thresholds": {
+    "min_accuracy": 0.45,
+    "min_f1": 0.35,
+    "min_directional_accuracy": 0.45,
+    "min_trading_accuracy": 0.4,
+    "max_variance": 0.3,
+    "stability_threshold": 0.55
+  },
+  "errors": []
+}

@@ -1,0 +1,22 @@
+{
+  "study_name": "xgboost_w000_f1",
+  "model_name": "xgboost",
+  "n_trials": 25,
+  "optimization_time_s": 41963.82799999998,
+  "best_val_score": 0.5309762570448076,
+  "baseline_val_score": null,
+  "improvement_pct": null,
+  "optimization_metric": "f1",
+  "best_params": {
+    "n_estimators": 414,
+    "max_depth": 7,
+    "learning_rate": 0.1070881892709943,
+    "subsample": 0.9257586930950283,
+    "colsample_bytree": 0.8499283640920479,
+    "min_child_weight": 9,
+    "gamma": 0.8139937055778315,
+    "reg_alpha": 0.00038861158206804933,
+    "reg_lambda": 3.4169638800010096e-08
+  },
+  "created_at": "2026-07-02T09:09:58.624123+00:00"
+}

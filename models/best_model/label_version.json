@@ -1,0 +1,6 @@
+{
+  "label_version": "1.0.0",
+  "target_column": "direction_1b",
+  "label_type": "classification",
+  "n_classes": 3
+}

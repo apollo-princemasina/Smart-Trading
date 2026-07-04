@@ -1,0 +1,13 @@
+features:
+  ict:
+    - swings
+    - bos
+    - choch
+    - mss
+    - order_blocks
+  traditional:
+    - moving_averages
+    - atr
+    - rsi
+    - macd
+    - bollinger

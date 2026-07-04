@@ -1,0 +1,99 @@
+{
+  "manifest_version": "1.0.0",
+  "bundle_type": "inference_pipeline",
+  "model_name": "xgboost",
+  "created_at": "2026-07-02T09:09:58.624123+00:00",
+  "required_files": [
+    "feature_order.json",
+    "inference_config.json",
+    "label_version.json",
+    "model.joblib",
+    "model_metadata.json",
+    "optimization_results.json",
+    "pipeline_manifest.json",
+    "preprocessing.joblib",
+    "schema_version.json",
+    "selected_features.json",
+    "training_metrics.json"
+  ],
+  "files": [
+    {
+      "filename": "feature_order.json",
+      "size_bytes": 4967,
+      "sha256": "bd93ac8ace3f63c54804d98cae41b15631f85d4011cc402ffb4b4fdf4b959e60",
+      "required": true,
+      "description": "Ordered list of feature column names"
+    },
+    {
+      "filename": "inference_config.json",
+      "size_bytes": 5796,
+      "sha256": "a2bb13a408ea9bf39c5474fe219c7a18b8d54f15bbf61d91665bc84834cdd06c",
+      "required": true,
+      "description": "Complete inference configuration"
+    },
+    {
+      "filename": "label_version.json",
+      "size_bytes": 122,
+      "sha256": "6c714db117ecdad543ba9b07886718dc3921d9fcdd986e03525ddd15ed378418",
+      "required": true,
+      "description": "Label and target metadata"
+    },
+    {
+      "filename": "model.joblib",
+      "size_bytes": 1722785,
+      "sha256": "de0ddfa3b1fbf10df9d826bf7fe0056ff0fc220fbbd72334554e17237f4c6747",
+      "required": true,
+      "description": "Fitted estimator (joblib-serialised)"
+    },
+    {
+      "filename": "model_metadata.json",
+      "size_bytes": 6581,
+      "sha256": "8daf65fd1b5d1c4d33d144863046f5c54fb87cfe7977a87c3f3795024eefbf56",
+      "required": true,
+      "description": "Model params, window info, training metadata"
+    },
+    {
+      "filename": "optimization_results.json",
+      "size_bytes": 660,
+      "sha256": "b34825f1b7a15902ad598c9135dafcfa719ec050d1e835af5b3b50e998335077",
+      "required": true,
+      "description": "Best hyperparameters, n_trials, improvement"
+    },
+    {
+      "filename": "pipeline_manifest.json",
+      "size_bytes": 3106,
+      "sha256": "335673f4fbd5458df045eeacdaecd0011eb5c3b9c241490db250c092db745252",
+      "required": true,
+      "description": "Manifest with SHA-256 checksums for all files"
+    },
+    {
+      "filename": "preprocessing.joblib",
+      "size_bytes": 3585,
+      "sha256": "865927b399e2002797a56fd34a3ef262495db940d18cbd9941e4b5bc71690e2e",
+      "required": true,
+      "description": "ColumnImputer preprocessing artifact"
+    },
+    {
+      "filename": "schema_version.json",
+      "size_bytes": 118,
+      "sha256": "1f0c11c2879b0c0b9c23e8ef0ee356035af7a49880ab2592625c1333b72ffab8",
+      "required": true,
+      "description": "Pipeline schema version information"
+    },
+    {
+      "filename": "selected_features.json",
+      "size_bytes": 5543,
+      "sha256": "a6fe892a73a27bd1f6486255e183502aa6c716f2d73caca1e3a4d73c06c5a399",
+      "required": true,
+      "description": "Feature metadata (names, count, schema version)"
+    },
+    {
+      "filename": "training_metrics.json",
+      "size_bytes": 1515,
+      "sha256": "5825c618b10c7dae20ab0dd1e3495eb86c280aafcb052de17cc036af0cc76145",
+      "required": true,
+      "description": "Train/val/test metric dictionaries"
+    }
+  ],
+  "is_complete": true
+}

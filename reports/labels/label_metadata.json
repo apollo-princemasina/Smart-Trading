@@ -1,0 +1,798 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "M15",
+  "label_version": 1,
+  "generated_at": "2026-07-01T20:51:46.849781+00:00",
+  "generator": "LabelPipeline v1",
+  "n_rows": 87503,
+  "n_valid_rows": 87502,
+  "label_columns": [
+    "fwd_return_1b",
+    "direction_1b",
+    "bias_1b",
+    "confidence_1b",
+    "probability_1b",
+    "fwd_return_3b",
+    "direction_3b",
+    "bias_3b",
+    "confidence_3b",
+    "probability_3b",
+    "fwd_return_5b",
+    "direction_5b",
+    "bias_5b",
+    "confidence_5b",
+    "probability_5b",
+    "fwd_return_10b",
+    "direction_10b",
+    "bias_10b",
+    "confidence_10b",
+    "probability_10b",
+    "long_outcome",
+    "long_outcome_bars",
+    "long_mfe_pct",
+    "long_mae_pct",
+    "long_rr",
+    "short_outcome",
+    "short_outcome_bars",
+    "short_mfe_pct",
+    "short_mae_pct",
+    "short_rr",
+    "outcome",
+    "outcome_bars",
+    "mfe_pct",
+    "mae_pct",
+    "realized_rr",
+    "expected_reward_pct",
+    "expected_risk_pct",
+    "trade_duration_bars",
+    "setup_quality",
+    "setup_score",
+    "setup_mfe_mae_ratio",
+    "setup_achievable_rr",
+    "entry_signal",
+    "optimal_entry_offset",
+    "time_to_entry",
+    "is_optimal_entry",
+    "mgmt_strategy",
+    "mgmt_optimal_exit_bar",
+    "mgmt_max_r_multiple",
+    "mgmt_breakeven_bar",
+    "mgmt_trail_bar",
+    "mgmt_partial_exit_bar",
+    "mgmt_exit_type"
+  ],
+  "column_meta": [
+    {
+      "name": "fwd_return_1b",
+      "dtype": "float64",
+      "nan_rate": 1.1428179605270677e-05,
+      "n_valid": 87502,
+      "value_range": {
+        "min": -0.01146532687902861,
+        "max": 0.016017554976193622
+      }
+    },
+    {
+      "name": "direction_1b",
+      "dtype": "float64",
+      "nan_rate": 1.1428179605270677e-05,
+      "n_valid": 87502,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "bias_1b",
+      "dtype": "float64",
+      "nan_rate": 1.1428179605270677e-05,
+      "n_valid": 87502,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "confidence_1b",
+      "dtype": "float64",
+      "nan_rate": 0.00022856359210541354,
+      "n_valid": 87483,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "probability_1b",
+      "dtype": "float64",
+      "nan_rate": 0.00022856359210541354,
+      "n_valid": 87483,
+      "value_range": {
+        "min": 4.5397868702434395e-05,
+        "max": 0.9999546021312976
+      }
+    },
+    {
+      "name": "fwd_return_3b",
+      "dtype": "float64",
+      "nan_rate": 3.428453881581203e-05,
+      "n_valid": 87500,
+      "value_range": {
+        "min": -0.015502957044648913,
+        "max": 0.01770591899746771
+      }
+    },
+    {
+      "name": "direction_3b",
+      "dtype": "float64",
+      "nan_rate": 3.428453881581203e-05,
+      "n_valid": 87500,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "bias_3b",
+      "dtype": "float64",
+      "nan_rate": 3.428453881581203e-05,
+      "n_valid": 87500,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "confidence_3b",
+      "dtype": "float64",
+      "nan_rate": 0.0002514199513159549,
+      "n_valid": 87481,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "probability_3b",
+      "dtype": "float64",
+      "nan_rate": 0.0002514199513159549,
+      "n_valid": 87481,
+      "value_range": {
+        "min": 4.5397868702434395e-05,
+        "max": 0.9999546021312976
+      }
+    },
+    {
+      "name": "fwd_return_5b",
+      "dtype": "float64",
+      "nan_rate": 5.7140898026353385e-05,
+      "n_valid": 87498,
+      "value_range": {
+        "min": -0.016525371604809564,
+        "max": 0.018898059165752646
+      }
+    },
+    {
+      "name": "direction_5b",
+      "dtype": "float64",
+      "nan_rate": 5.7140898026353385e-05,
+      "n_valid": 87498,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "bias_5b",
+      "dtype": "float64",
+      "nan_rate": 5.7140898026353385e-05,
+      "n_valid": 87498,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "confidence_5b",
+      "dtype": "float64",
+      "nan_rate": 0.00027427631052649623,
+      "n_valid": 87479,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "probability_5b",
+      "dtype": "float64",
+      "nan_rate": 0.00027427631052649623,
+      "n_valid": 87479,
+      "value_range": {
+        "min": 4.5397868702434395e-05,
+        "max": 0.9999203299279463
+      }
+    },
+    {
+      "name": "fwd_return_10b",
+      "dtype": "float64",
+      "nan_rate": 0.00011428179605270677,
+      "n_valid": 87493,
+      "value_range": {
+        "min": -0.016083108982059564,
+        "max": 0.022303983796363804
+      }
+    },
+    {
+      "name": "direction_10b",
+      "dtype": "float64",
+      "nan_rate": 0.00011428179605270677,
+      "n_valid": 87493,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "bias_10b",
+      "dtype": "float64",
+      "nan_rate": 0.00011428179605270677,
+      "n_valid": 87493,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "confidence_10b",
+      "dtype": "float64",
+      "nan_rate": 0.0003314172085528496,
+      "n_valid": 87474,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "probability_10b",
+      "dtype": "float64",
+      "nan_rate": 0.0003314172085528496,
+      "n_valid": 87474,
+      "value_range": {
+        "min": 0.0002301655797296629,
+        "max": 0.9997152474978971
+      }
+    },
+    {
+      "name": "long_outcome",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "long_outcome_bars",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 1.0,
+        "max": 50.0
+      }
+    },
+    {
+      "name": "long_mfe_pct",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.017954856361149144
+      }
+    },
+    {
+      "name": "long_mae_pct",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.01270065960855999
+      }
+    },
+    {
+      "name": "long_rr",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 1.9999999999982347,
+        "max": 2.000000000001693
+      }
+    },
+    {
+      "name": "short_outcome",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "short_outcome_bars",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 1.0,
+        "max": 50.0
+      }
+    },
+    {
+      "name": "short_mfe_pct",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.01393691307488561
+      }
+    },
+    {
+      "name": "short_mae_pct",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.01683998995227341
+      }
+    },
+    {
+      "name": "short_rr",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 1.9999999999982347,
+        "max": 2.000000000001693
+      }
+    },
+    {
+      "name": "outcome",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "outcome_bars",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 1.0,
+        "max": 50.0
+      }
+    },
+    {
+      "name": "mfe_pct",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.017954856361149144
+      }
+    },
+    {
+      "name": "mae_pct",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.01683998995227341
+      }
+    },
+    {
+      "name": "realized_rr",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 1.9999999999982347,
+        "max": 2.000000000001693
+      }
+    },
+    {
+      "name": "expected_reward_pct",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 0.0002326452873434788,
+        "max": 0.007444262355132124
+      }
+    },
+    {
+      "name": "expected_risk_pct",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 0.0001163226436717394,
+        "max": 0.003722131177566062
+      }
+    },
+    {
+      "name": "trade_duration_bars",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 1.0,
+        "max": 50.0
+      }
+    },
+    {
+      "name": "setup_quality",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0,
+          3.0
+        ]
+      }
+    },
+    {
+      "name": "setup_score",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 0.0,
+        "max": 100.0
+      }
+    },
+    {
+      "name": "setup_mfe_mae_ratio",
+      "dtype": "float64",
+      "nan_rate": 7.999725723689474e-05,
+      "n_valid": 87496,
+      "value_range": {
+        "min": 0.0,
+        "max": 1217676.5727518406
+      }
+    },
+    {
+      "name": "setup_achievable_rr",
+      "dtype": "float64",
+      "nan_rate": 7.999725723689474e-05,
+      "n_valid": 87496,
+      "value_range": {
+        "min": 0.0,
+        "max": 9.61679775680618
+      }
+    },
+    {
+      "name": "entry_signal",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "optimal_entry_offset",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": -1.0,
+        "max": 9.0
+      }
+    },
+    {
+      "name": "time_to_entry",
+      "dtype": "float64",
+      "nan_rate": 0.017005131252642768,
+      "n_valid": 86015,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          8.0,
+          9.0
+        ]
+      }
+    },
+    {
+      "name": "is_optimal_entry",
+      "dtype": "float64",
+      "nan_rate": 0.0005714089802635338,
+      "n_valid": 87453,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "mgmt_strategy",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          3.0
+        ]
+      }
+    },
+    {
+      "name": "mgmt_optimal_exit_bar",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": 0.0,
+        "max": 49.0
+      }
+    },
+    {
+      "name": "mgmt_max_r_multiple",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": -3.789782006690975,
+        "max": 12.99338670306258
+      }
+    },
+    {
+      "name": "mgmt_breakeven_bar",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": -1.0,
+        "max": 30.0
+      }
+    },
+    {
+      "name": "mgmt_trail_bar",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": -1.0,
+        "max": 48.0
+      }
+    },
+    {
+      "name": "mgmt_partial_exit_bar",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "min": -1.0,
+        "max": 44.0
+      }
+    },
+    {
+      "name": "mgmt_exit_type",
+      "dtype": "float64",
+      "nan_rate": 0.0006399780578951579,
+      "n_valid": 87447,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0,
+          3.0
+        ]
+      }
+    }
+  ],
+  "class_distributions": {
+    "direction_1b": {
+      "1": 54777,
+      "2": 16408,
+      "0": 16317
+    },
+    "bias_1b": {
+      "0": 43968,
+      "1": 43534
+    },
+    "direction_3b": {
+      "1": 37721,
+      "2": 25107,
+      "0": 24672
+    },
+    "bias_3b": {
+      "1": 44001,
+      "0": 43499
+    },
+    "direction_5b": {
+      "1": 30458,
+      "2": 28876,
+      "0": 28164
+    },
+    "bias_5b": {
+      "1": 44161,
+      "0": 43337
+    },
+    "direction_10b": {
+      "2": 33443,
+      "0": 32035,
+      "1": 22015
+    },
+    "bias_10b": {
+      "1": 44328,
+      "0": 43165
+    },
+    "long_outcome": {
+      "2": 58251,
+      "1": 27708,
+      "0": 1488
+    },
+    "short_outcome": {
+      "2": 58088,
+      "1": 27881,
+      "0": 1478
+    },
+    "outcome": {
+      "2": 44283,
+      "1": 41335,
+      "0": 1829
+    },
+    "setup_quality": {
+      "3": 41335,
+      "0": 34814,
+      "1": 11249,
+      "2": 49
+    },
+    "entry_signal": {
+      "1": 49875,
+      "2": 36140,
+      "0": 1432
+    },
+    "time_to_entry": {
+      "0": 36140,
+      "9": 10083,
+      "8": 7367,
+      "7": 5838,
+      "6": 4989,
+      "5": 4567,
+      "4": 4376,
+      "1": 4370,
+      "3": 4190,
+      "2": 4095
+    },
+    "is_optimal_entry": {
+      "0": 49935,
+      "1": 37518
+    },
+    "mgmt_strategy": {
+      "3": 44283,
+      "1": 43113,
+      "0": 51
+    },
+    "mgmt_exit_type": {
+      "1": 44177,
+      "0": 41335,
+      "3": 1829,
+      "2": 106
+    }
+  },
+  "config_snapshot": {
+    "market_bias": {
+      "horizons": [
+        1,
+        3,
+        5,
+        10
+      ],
+      "neutral_threshold": 0.0003,
+      "price_col": "close",
+      "rolling_vol_window": 252
+    },
+    "trade_outcome": {
+      "atr_period": 14,
+      "tp_atr_mult": 2.0,
+      "sl_atr_mult": 1.0,
+      "max_bars": 50,
+      "min_atr_pct": 0.0001
+    },
+    "setup_quality": {
+      "atr_period": 14,
+      "tp_atr_mult": 2.0,
+      "sl_atr_mult": 1.0,
+      "max_bars": 50,
+      "min_atr_pct": 0.0001,
+      "high_threshold": 70.0,
+      "medium_threshold": 50.0,
+      "low_threshold": 25.0
+    },
+    "entry_timing": {
+      "atr_period": 14,
+      "tp_atr_mult": 2.0,
+      "sl_atr_mult": 1.0,
+      "max_bars": 50,
+      "window_size": 10,
+      "enter_threshold": 0.8,
+      "ignore_threshold": 0.1,
+      "min_atr_pct": 0.0001
+    },
+    "trade_management": {
+      "atr_period": 14,
+      "tp_atr_mult": 2.0,
+      "sl_atr_mult": 1.0,
+      "max_bars": 50,
+      "min_atr_pct": 0.0001,
+      "trail_threshold": 0.5,
+      "partial_threshold": 0.3,
+      "early_exit_r": -0.7
+    }
+  },
+  "validation_summary": "LabelValidation: PASSED\n  [PASS] empty: 87503 rows present.\n  [PASS] nan_rate: 'fwd_return_1b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'direction_1b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'bias_1b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'confidence_1b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'probability_1b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'fwd_return_3b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'direction_3b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'bias_3b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'confidence_3b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'probability_3b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'fwd_return_5b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'direction_5b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'bias_5b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'confidence_5b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'probability_5b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'fwd_return_10b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'direction_10b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'bias_10b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'confidence_10b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'probability_10b': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'long_outcome': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'long_outcome_bars': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'long_mfe_pct': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'long_mae_pct': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'long_rr': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'short_outcome': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'short_outcome_bars': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'short_mfe_pct': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'short_mae_pct': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'short_rr': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'outcome': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'outcome_bars': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'mfe_pct': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'mae_pct': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'realized_rr': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'expected_reward_pct': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'expected_risk_pct': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'trade_duration_bars': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'setup_quality': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'setup_score': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'setup_mfe_mae_ratio': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'setup_achievable_rr': 0.0% NaN \u2014 OK.\n  [PASS] nan_rate: 'entry_signal': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'optimal_entry_offset': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'time_to_entry': 1.7% NaN \u2014 OK.\n  [PASS] nan_rate: 'is_optimal_entry': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'mgmt_strategy': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'mgmt_optimal_exit_bar': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'mgmt_max_r_multiple': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'mgmt_breakeven_bar': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'mgmt_trail_bar': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'mgmt_partial_exit_bar': 0.1% NaN \u2014 OK.\n  [PASS] nan_rate: 'mgmt_exit_type': 0.1% NaN \u2014 OK.\n  [PASS] class_balance: 'direction_1b': balanced (min class 18.65%).\n  [PASS] class_balance: 'bias_1b': balanced (min class 49.75%).\n  [PASS] class_balance: 'direction_3b': balanced (min class 28.20%).\n  [PASS] class_balance: 'bias_3b': balanced (min class 49.71%).\n  [PASS] class_balance: 'direction_5b': balanced (min class 32.19%).\n  [PASS] class_balance: 'bias_5b': balanced (min class 49.53%).\n  [PASS] class_balance: 'direction_10b': balanced (min class 25.16%).\n  [PASS] class_balance: 'bias_10b': balanced (min class 49.34%).\n  [WARNING] class_balance: 'long_outcome': minority class 1.70% < floor 2.00%.\n  [WARNING] class_balance: 'short_outcome': minority class 1.69% < floor 2.00%.\n  [PASS] class_balance: 'outcome': balanced (min class 2.09%).\n  [WARNING] class_balance: 'setup_quality': minority class 0.06% < floor 2.00%.\n  [WARNING] class_balance: 'entry_signal': minority class 1.64% < floor 2.00%.\n  [PASS] class_balance: 'time_to_entry': balanced (min class 4.76%).\n  [PASS] class_balance: 'is_optimal_entry': balanced (min class 42.90%).\n  [WARNING] class_balance: 'mgmt_strategy': minority class 0.06% < floor 2.00%.\n  [WARNING] class_balance: 'mgmt_exit_type': minority class 0.12% < floor 2.00%.\n  [WARNING] value_range: 'setup_score' expected [0,1], range [0.000, 100.000].",
+  "validation_passed": true,
+  "artefact_paths": {
+    "labels_parquet": "C:\\Users\\ndlov\\Documents\\Research and Innovation\\Smart Trading\\data\\labels\\EURUSD\\labels_EURUSD_v1.parquet"
+  },
+  "notes": ""
+}

@@ -1,0 +1,32 @@
+{
+  "years": {
+    "2015": {
+      "status": "failed",
+      "started_at": "2026-06-30T16:59:32.044505",
+      "error": "HTTPConnectionPool(host='datafeed.dukascopy.com', port=80): Max retries exceeded with url: /datafeed/EURUSD/2015/01/10/22h_ticks.bi5 (Caused by NameResolutionError(\"HTTPConnection(host='datafeed.dukascopy.com', port=80): Failed to resolve 'datafeed.dukascopy.com' ([Errno 11001] getaddrinfo failed)\"))",
+      "finished_at": "2026-06-30T17:07:07.881324"
+    },
+    "2016": {
+      "status": "failed",
+      "started_at": "2026-06-30T17:07:08.896963",
+      "error": "HTTPSConnectionPool(host='www.dukascopy.com', port=443): Max retries exceeded with url: /datafeed/EURUSD/2016/01/01/00h_ticks.bi5 (Caused by NameResolutionError(\"HTTPSConnection(host='www.dukascopy.com', port=443): Failed to resolve 'www.dukascopy.com' ([Errno 11001] getaddrinfo failed)\"))",
+      "finished_at": "2026-06-30T17:07:58.257560"
+    },
+    "2017": {
+      "status": "failed",
+      "started_at": "2026-06-30T17:07:59.263147",
+      "error": "HTTPSConnectionPool(host='www.dukascopy.com', port=443): Max retries exceeded with url: /datafeed/EURUSD/2017/01/01/00h_ticks.bi5 (Caused by NameResolutionError(\"HTTPSConnection(host='www.dukascopy.com', port=443): Failed to resolve 'www.dukascopy.com' ([Errno 11001] getaddrinfo failed)\"))",
+      "finished_at": "2026-06-30T17:08:29.318124"
+    },
+    "2018": {
+      "status": "failed",
+      "started_at": "2026-06-30T17:08:30.324575",
+      "error": "HTTPSConnectionPool(host='www.dukascopy.com', port=443): Max retries exceeded with url: /datafeed/EURUSD/2018/01/01/00h_ticks.bi5 (Caused by NameResolutionError(\"HTTPSConnection(host='www.dukascopy.com', port=443): Failed to resolve 'www.dukascopy.com' ([Errno 11001] getaddrinfo failed)\"))",
+      "finished_at": "2026-06-30T17:09:00.363270"
+    },
+    "2019": {
+      "status": "in_progress",
+      "started_at": "2026-06-30T17:09:01.368354"
+    }
+  }
+}

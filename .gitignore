@@ -1,0 +1,55 @@
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# ── Secrets — NEVER commit these ─────────────────────────────────────────────
+.env
+frontend/.env.local
+frontend/.env*.local
+
+# ── Database ──────────────────────────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Node / Next.js ───────────────────────────────────────────────────────────
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+.next/
+
+# ── Large training data (use DVC or external storage for these) ──────────────
+data/ml/
+data/feature_cache/
+data/features/
+data/labels/
+data/processed/
+data/raw/
+data/buffer_cache/
+
+# ── Training model windows (only models/best_model/ is needed for inference) ──
+models/window_*/
+
+# ── OS / Editor ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/settings.json
+
+# ── Misc runtime ─────────────────────────────────────────────────────────────
+*.joblib.bak

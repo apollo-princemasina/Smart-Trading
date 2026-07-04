@@ -1,0 +1,79 @@
+{
+  "window_number": 0,
+  "model_name": "extra_trees",
+  "task_type": "classification",
+  "classification_metrics": {
+    "accuracy": 0.765728077232502,
+    "precision": 0.6216390674257938,
+    "recall": 0.38139119149954154,
+    "f1": 0.3831629331151185,
+    "n_classes": 3,
+    "support": 6215,
+    "roc_auc": 0.7760335847515473,
+    "pr_auc": 0.5290427186716681,
+    "log_loss": 0.6529787617029414,
+    "confusion_matrix": [
+      [
+        47,
+        668,
+        2
+      ],
+      [
+        29,
+        4636,
+        71
+      ],
+      [
+        5,
+        681,
+        76
+      ]
+    ],
+    "classes": [
+      0.0,
+      1.0,
+      2.0
+    ],
+    "balanced_accuracy": 0.38139119149954154,
+    "mcc": 0.1637701958567082,
+    "cohen_kappa": 0.10491065467152672
+  },
+  "regression_metrics": {},
+  "trading_metrics": {
+    "directional_accuracy": 0.765728077232502,
+    "tp_prediction_accuracy": 0.7746031746031746,
+    "sl_prediction_accuracy": 0.5100671140939598,
+    "avg_confidence": 0.6412592685470689,
+    "long_accuracy": 0.9788851351351351,
+    "short_accuracy": 0.09973753280839895,
+    "expected_return": 0.49103022671206775,
+    "expected_risk": 0.12723973234356925,
+    "risk_reward_accuracy": 1.5186299081035923
+  },
+  "combined_metrics": {
+    "accuracy": 0.765728077232502,
+    "precision": 0.6216390674257938,
+    "recall": 0.38139119149954154,
+    "f1": 0.3831629331151185,
+    "n_classes": 3,
+    "support": 6215,
+    "roc_auc": 0.7760335847515473,
+    "pr_auc": 0.5290427186716681,
+    "log_loss": 0.6529787617029414,
+    "balanced_accuracy": 0.38139119149954154,
+    "mcc": 0.1637701958567082,
+    "cohen_kappa": 0.10491065467152672,
+    "directional_accuracy": 0.765728077232502,
+    "tp_prediction_accuracy": 0.7746031746031746,
+    "sl_prediction_accuracy": 0.5100671140939598,
+    "avg_confidence": 0.6412592685470689,
+    "long_accuracy": 0.9788851351351351,
+    "short_accuracy": 0.09973753280839895,
+    "expected_return": 0.49103022671206775,
+    "expected_risk": 0.12723973234356925,
+    "risk_reward_accuracy": 1.5186299081035923
+  },
+  "inference_time_s": 0.9529999999795109,
+  "n_test": 6215,
+  "error": null
+}

@@ -1,0 +1,4677 @@
+{
+  "dataset_name": "training_dataset",
+  "dataset_version": 3,
+  "schema_version": "1.0.0",
+  "label_version": 1,
+  "pipeline_version": "1.0.0",
+  "created_at": "2026-07-01T20:53:43.813571+00:00",
+  "symbol": "EURUSD",
+  "prediction_timeframe": "M15",
+  "higher_timeframes": [],
+  "feature_set": "all",
+  "label_groups": [],
+  "row_count": 87502,
+  "feature_count": 252,
+  "label_count": 53,
+  "column_count": 305,
+  "start_date": "2022-06-21 18:30:00+00:00",
+  "end_date": "2025-12-30 21:45:00+00:00",
+  "total_missing": 452615,
+  "missing_rate": 0.016959425002369966,
+  "column_summaries": [
+    {
+      "name": "open",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95392,
+        "max": 1.18937
+      }
+    },
+    {
+      "name": "high",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95517,
+        "max": 1.19185
+      }
+    },
+    {
+      "name": "low",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95357,
+        "max": 1.18864
+      }
+    },
+    {
+      "name": "close",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95391,
+        "max": 1.1893799999999999
+      }
+    },
+    {
+      "name": "tick_volume",
+      "dtype": "int64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 1.0,
+        "max": 21483.0
+      }
+    },
+    {
+      "name": "spread",
+      "dtype": "int64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 129.0
+      }
+    },
+    {
+      "name": "real_volume",
+      "dtype": "int64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "w1_timestamp",
+      "dtype": "datetime64[ns, UTC]",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": "2022-06-12 00:00:00+00:00",
+        "max": "2025-12-21 00:00:00+00:00"
+      }
+    },
+    {
+      "name": "w1_open",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.96714,
+        "max": 1.17804
+      }
+    },
+    {
+      "name": "w1_high",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.98082,
+        "max": 1.19185
+      }
+    },
+    {
+      "name": "w1_low",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95357,
+        "max": 1.1716
+      }
+    },
+    {
+      "name": "w1_close",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9688,
+        "max": 1.17712
+      }
+    },
+    {
+      "name": "w1_tick_volume",
+      "dtype": "int64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 110435.0,
+        "max": 1159045.0
+      }
+    },
+    {
+      "name": "d1_timestamp",
+      "dtype": "datetime64[ns, UTC]",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": "2022-06-20 00:00:00+00:00",
+        "max": "2025-12-29 00:00:00+00:00"
+      }
+    },
+    {
+      "name": "d1_open",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95923,
+        "max": 1.18588
+      }
+    },
+    {
+      "name": "d1_high",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.96711,
+        "max": 1.19185
+      }
+    },
+    {
+      "name": "d1_low",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95357,
+        "max": 1.18069
+      }
+    },
+    {
+      "name": "d1_close",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95924,
+        "max": 1.18659
+      }
+    },
+    {
+      "name": "d1_tick_volume",
+      "dtype": "int64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 18.0,
+        "max": 321617.0
+      }
+    },
+    {
+      "name": "h4_timestamp",
+      "dtype": "datetime64[ns, UTC]",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": "2022-06-21 12:00:00+00:00",
+        "max": "2025-12-30 16:00:00+00:00"
+      }
+    },
+    {
+      "name": "h4_open",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95505,
+        "max": 1.18639
+      }
+    },
+    {
+      "name": "h4_high",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95766,
+        "max": 1.19185
+      }
+    },
+    {
+      "name": "h4_low",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95357,
+        "max": 1.1857199999999999
+      }
+    },
+    {
+      "name": "h4_close",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95506,
+        "max": 1.18659
+      }
+    },
+    {
+      "name": "h4_tick_volume",
+      "dtype": "int64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 18.0,
+        "max": 116173.0
+      }
+    },
+    {
+      "name": "h1_timestamp",
+      "dtype": "datetime64[ns, UTC]",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": "2022-06-21 17:00:00+00:00",
+        "max": "2025-12-30 20:00:00+00:00"
+      }
+    },
+    {
+      "name": "h1_open",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95392,
+        "max": 1.18708
+      }
+    },
+    {
+      "name": "h1_high",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95592,
+        "max": 1.19185
+      }
+    },
+    {
+      "name": "h1_low",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95357,
+        "max": 1.18659
+      }
+    },
+    {
+      "name": "h1_close",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95391,
+        "max": 1.18705
+      }
+    },
+    {
+      "name": "h1_tick_volume",
+      "dtype": "int64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 14.0,
+        "max": 66526.0
+      }
+    },
+    {
+      "name": "body_size",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.016139999999999932
+      }
+    },
+    {
+      "name": "body_ratio",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "upper_wick",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.007150000000000212
+      }
+    },
+    {
+      "name": "lower_wick",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.005610000000000115
+      }
+    },
+    {
+      "name": "upper_wick_ratio",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "lower_wick_ratio",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "total_range",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.016190000000000038
+      }
+    },
+    {
+      "name": "true_range",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.016190000000000038
+      }
+    },
+    {
+      "name": "body_to_range_ratio",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "is_bullish",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "is_bearish",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "doji_score",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "marubozu_score",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "inside_bar",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "outside_bar",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "consecutive_bulls",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 15.0
+      }
+    },
+    {
+      "name": "consecutive_bears",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 14.0
+      }
+    },
+    {
+      "name": "higher_close_count",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          8.0,
+          9.0,
+          10.0
+        ]
+      }
+    },
+    {
+      "name": "lower_close_count",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          8.0,
+          9.0,
+          10.0
+        ]
+      }
+    },
+    {
+      "name": "higher_high_count",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          8.0,
+          9.0,
+          10.0
+        ]
+      }
+    },
+    {
+      "name": "lower_low_count",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          8.0,
+          9.0,
+          10.0
+        ]
+      }
+    },
+    {
+      "name": "fvg_bullish",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "fvg_bearish",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "fvg_bullish_top",
+      "dtype": "float64",
+      "nan_count": 60176,
+      "nan_rate": 0.6877099952001097,
+      "n_valid": 27326,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95577,
+        "max": 1.18864
+      }
+    },
+    {
+      "name": "fvg_bullish_bottom",
+      "dtype": "float64",
+      "nan_count": 60176,
+      "nan_rate": 0.6877099952001097,
+      "n_valid": 27326,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95558,
+        "max": 1.18668
+      }
+    },
+    {
+      "name": "fvg_bearish_top",
+      "dtype": "float64",
+      "nan_count": 61555,
+      "nan_rate": 0.7034696349797719,
+      "n_valid": 25947,
+      "is_label": false,
+      "value_range": {
+        "min": 0.956,
+        "max": 1.18864
+      }
+    },
+    {
+      "name": "fvg_bearish_bottom",
+      "dtype": "float64",
+      "nan_count": 61555,
+      "nan_rate": 0.7034696349797719,
+      "n_valid": 25947,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95563,
+        "max": 1.18632
+      }
+    },
+    {
+      "name": "fvg_bullish_active",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "fvg_bearish_active",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "fvg_bullish_age",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 42.0
+      }
+    },
+    {
+      "name": "fvg_bearish_age",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 50.0
+      }
+    },
+    {
+      "name": "pivot_high",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "pivot_low",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "major_pivot_high",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "major_pivot_low",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "minor_pivot_high",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "minor_pivot_low",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "higher_high",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "lower_high",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "higher_low",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "lower_low",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "swing_high_id",
+      "dtype": "float64",
+      "nan_count": 9,
+      "nan_rate": 0.00010285479189047107,
+      "n_valid": 87493,
+      "is_label": false,
+      "value_range": {
+        "min": 1.0,
+        "max": 5297.0
+      }
+    },
+    {
+      "name": "swing_low_id",
+      "dtype": "float64",
+      "nan_count": 13,
+      "nan_rate": 0.00014856803273068043,
+      "n_valid": 87489,
+      "is_label": false,
+      "value_range": {
+        "min": 1.0,
+        "max": 5366.0
+      }
+    },
+    {
+      "name": "swing_high_price",
+      "dtype": "float64",
+      "nan_count": 9,
+      "nan_rate": 0.00010285479189047107,
+      "n_valid": 87493,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95643,
+        "max": 1.19185
+      }
+    },
+    {
+      "name": "swing_low_price",
+      "dtype": "float64",
+      "nan_count": 13,
+      "nan_rate": 0.00014856803273068043,
+      "n_valid": 87489,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95357,
+        "max": 1.1851
+      }
+    },
+    {
+      "name": "swing_high_duration",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 68.0
+      }
+    },
+    {
+      "name": "swing_low_duration",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 61.0
+      }
+    },
+    {
+      "name": "swing_high_range",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.026599999999999957
+      }
+    },
+    {
+      "name": "swing_low_range",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.023219999999999907
+      }
+    },
+    {
+      "name": "swing_high_strength",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 50.12435233160346
+      }
+    },
+    {
+      "name": "swing_low_strength",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 43.87044534413054
+      }
+    },
+    {
+      "name": "trend",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          -1.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "trend_duration",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 1.0,
+        "max": 109.0
+      }
+    },
+    {
+      "name": "trend_strength",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 14.0
+      }
+    },
+    {
+      "name": "last_major_high",
+      "dtype": "float64",
+      "nan_count": 93,
+      "nan_rate": 0.0010628328495348677,
+      "n_valid": 87409,
+      "is_label": false,
+      "value_range": {
+        "min": 0.96006,
+        "max": 1.19185
+      }
+    },
+    {
+      "name": "last_major_low",
+      "dtype": "float64",
+      "nan_count": 62,
+      "nan_rate": 0.0007085552330232452,
+      "n_valid": 87440,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95357,
+        "max": 1.18509
+      }
+    },
+    {
+      "name": "last_internal_high",
+      "dtype": "float64",
+      "nan_count": 9,
+      "nan_rate": 0.00010285479189047107,
+      "n_valid": 87493,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95625,
+        "max": 1.19185
+      }
+    },
+    {
+      "name": "last_internal_low",
+      "dtype": "float64",
+      "nan_count": 4,
+      "nan_rate": 4.571324084020937e-05,
+      "n_valid": 87498,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95357,
+        "max": 1.1857199999999999
+      }
+    },
+    {
+      "name": "distance_to_last_major_high",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -1.6571134626690232,
+        "max": 2.326865140996608
+      }
+    },
+    {
+      "name": "distance_to_last_major_low",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -1.9244476122594538,
+        "max": 2.83812949640288
+      }
+    },
+    {
+      "name": "distance_to_last_internal_high",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -1.3087705098962517,
+        "max": 2.1000817226371713
+      }
+    },
+    {
+      "name": "distance_to_last_internal_low",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -1.7301530118882726,
+        "max": 2.3523980709353634
+      }
+    },
+    {
+      "name": "rsi",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 100.0
+      }
+    },
+    {
+      "name": "stochastic_k",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 100.0
+      }
+    },
+    {
+      "name": "stochastic_d",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.3080043109431019,
+        "max": 99.8039215686262
+      }
+    },
+    {
+      "name": "macd",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -0.00473408444612855,
+        "max": 0.005231096085573483
+      }
+    },
+    {
+      "name": "macd_signal",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -0.0042189589825884395,
+        "max": 0.00445849075417727
+      }
+    },
+    {
+      "name": "macd_histogram",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -0.0019588011164434443,
+        "max": 0.002534989994429116
+      }
+    },
+    {
+      "name": "cci",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -666.6666666667976,
+        "max": 590.8298465829861
+      }
+    },
+    {
+      "name": "williams_r",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -100.0,
+        "max": -0.0
+      }
+    },
+    {
+      "name": "roc",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -1.6501066328586316,
+        "max": 2.330840670606686
+      }
+    },
+    {
+      "name": "price_momentum",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -0.016229999999999967,
+        "max": 0.022440000000000015
+      }
+    },
+    {
+      "name": "tsi",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -100.0,
+        "max": 75.19826414280901
+      }
+    },
+    {
+      "name": "ema9",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9553541883229998,
+        "max": 1.1868561906795398
+      }
+    },
+    {
+      "name": "ema20",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9557180103285341,
+        "max": 1.1865633860682636
+      }
+    },
+    {
+      "name": "ema50",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9566788759567466,
+        "max": 1.1853775479756008
+      }
+    },
+    {
+      "name": "ema100",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9580970031996815,
+        "max": 1.1845117198491855
+      }
+    },
+    {
+      "name": "ema200",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.961070604089351,
+        "max": 1.182515724234436
+      }
+    },
+    {
+      "name": "sma20",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9554874999999999,
+        "max": 1.1865325
+      }
+    },
+    {
+      "name": "sma50",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9561544000000001,
+        "max": 1.1862404
+      }
+    },
+    {
+      "name": "sma100",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9579218,
+        "max": 1.1854628
+      }
+    },
+    {
+      "name": "wma20",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9554443333333333,
+        "max": 1.1866984285714286
+      }
+    },
+    {
+      "name": "hma20",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9546820307359307,
+        "max": 1.1875643653679655
+      }
+    },
+    {
+      "name": "ema_slope",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -0.5303471934786852,
+        "max": 0.6812570874596617
+      }
+    },
+    {
+      "name": "ema_cross",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          -1.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "log_return",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -0.01146532687902861,
+        "max": 0.016017554976193622
+      }
+    },
+    {
+      "name": "simple_return",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -0.011399850493764005,
+        "max": 0.016146523677551497
+      }
+    },
+    {
+      "name": "rolling_return_5",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -0.016525371604809505,
+        "max": 0.018898059165752767
+      }
+    },
+    {
+      "name": "rolling_return_20",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -0.019777659284114787,
+        "max": 0.02306815621475224
+      }
+    },
+    {
+      "name": "fwd_return_1",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -0.01146532687902861,
+        "max": 0.016017554976193622
+      }
+    },
+    {
+      "name": "rolling_mean",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9554874999999999,
+        "max": 1.1865325
+      }
+    },
+    {
+      "name": "rolling_median",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.955445,
+        "max": 1.186495
+      }
+    },
+    {
+      "name": "rolling_var",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.00010373260474957869
+      }
+    },
+    {
+      "name": "rolling_std",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.010184920458677067
+      }
+    },
+    {
+      "name": "rolling_min",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95391,
+        "max": 1.18573
+      }
+    },
+    {
+      "name": "rolling_max",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95647,
+        "max": 1.1893799999999999
+      }
+    },
+    {
+      "name": "rolling_q25",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9551350000000001,
+        "max": 1.1862525
+      }
+    },
+    {
+      "name": "rolling_q75",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9558525,
+        "max": 1.186865
+      }
+    },
+    {
+      "name": "rolling_mad",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.010075500000000015
+      }
+    },
+    {
+      "name": "adx",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 75.3243817865569
+      }
+    },
+    {
+      "name": "plus_di",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 65.88768538771518
+      }
+    },
+    {
+      "name": "minus_di",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 64.0938104433165
+      }
+    },
+    {
+      "name": "aroon_up",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 100.0
+      }
+    },
+    {
+      "name": "aroon_down",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 100.0
+      }
+    },
+    {
+      "name": "aroon_oscillator",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -100.0,
+        "max": 100.0
+      }
+    },
+    {
+      "name": "parabolic_sar",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95357,
+        "max": 1.19185
+      }
+    },
+    {
+      "name": "atr",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.00015923296594901523,
+        "max": 0.0037228008922809966
+      }
+    },
+    {
+      "name": "normalized_atr",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.014729609075428775,
+        "max": 0.3277575091809583
+      }
+    },
+    {
+      "name": "bb_upper",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9565559679234458,
+        "max": 1.1886932376028008
+      }
+    },
+    {
+      "name": "bb_lower",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9531758299259866,
+        "max": 1.1858160109381983
+      }
+    },
+    {
+      "name": "bb_width",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 4.053621032697198
+      }
+    },
+    {
+      "name": "bb_percent_b",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -0.5754948957409826,
+        "max": 1.5584890808560503
+      }
+    },
+    {
+      "name": "kc_upper",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.957213625130258,
+        "max": 1.1877106589844455
+      }
+    },
+    {
+      "name": "kc_lower",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9534053684013666,
+        "max": 1.18575182944032
+      }
+    },
+    {
+      "name": "dc_upper",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95702,
+        "max": 1.19185
+      }
+    },
+    {
+      "name": "dc_lower",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95357,
+        "max": 1.18519
+      }
+    },
+    {
+      "name": "chaikin_volatility",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -75.65161949579151,
+        "max": 859.3726411810709
+      }
+    },
+    {
+      "name": "ibos_bullish",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "ibos_bearish",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "ichoch_bullish",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "ichoch_bearish",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "bos_bullish",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "bos_bearish",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "choch_bullish",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "choch_bearish",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "structure_bias",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          -1.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "bars_since_structure_break",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 212.0
+      }
+    },
+    {
+      "name": "eqh",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "eqh_price",
+      "dtype": "float64",
+      "nan_count": 16,
+      "nan_rate": 0.00018285296336083748,
+      "n_valid": 87486,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95998,
+        "max": 1.187065
+      }
+    },
+    {
+      "name": "eql",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "eql_price",
+      "dtype": "float64",
+      "nan_count": 127,
+      "nan_rate": 0.0014513953966766473,
+      "n_valid": 87375,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9536800000000001,
+        "max": 1.185095
+      }
+    },
+    {
+      "name": "eqh_age",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 647.0
+      }
+    },
+    {
+      "name": "eql_age",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 513.0
+      }
+    },
+    {
+      "name": "pd_ratio",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "pd_equilibrium",
+      "dtype": "float64",
+      "nan_count": 96,
+      "nan_rate": 0.0010971177801650247,
+      "n_valid": 87406,
+      "is_label": false,
+      "value_range": {
+        "min": 0.956815,
+        "max": 1.18756
+      }
+    },
+    {
+      "name": "pd_distance_from_eq",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -2.0474845123784604,
+        "max": 1.8860396793732481
+      }
+    },
+    {
+      "name": "pd_zone",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          -1.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "skewness",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -3.6862583533310334,
+        "max": 3.603320172513181
+      }
+    },
+    {
+      "name": "kurtosis",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -1.9099407267750965,
+        "max": 12.604295147112278
+      }
+    },
+    {
+      "name": "zscore",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -4.3019795829639,
+        "max": 4.233956323424295
+      }
+    },
+    {
+      "name": "percentile_rank",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 100.0
+      }
+    },
+    {
+      "name": "normalized_price",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "price_rank",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "entropy",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 3.284183719779189
+      }
+    },
+    {
+      "name": "rolling_entropy_5",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          0.7219280948873623,
+          0.9709505944546686,
+          1.0,
+          1.3709505944546687,
+          1.5,
+          1.5219280948873621,
+          1.584962500721156,
+          1.9219280948873623,
+          2.321928094887362
+        ]
+      }
+    },
+    {
+      "name": "approximate_entropy",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.8487622976159797
+      }
+    },
+    {
+      "name": "efficiency_ratio",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "hurst",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.2900251879881602,
+        "max": 0.7020117105509002
+      }
+    },
+    {
+      "name": "fractal_dimension",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 1.2979882894491,
+        "max": 1.7099748120118399
+      }
+    },
+    {
+      "name": "market_noise",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "directional_efficiency",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 1.840527318700771e-16,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "price_smoothness",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          0.027506724938661353,
+          0.06798935726150501,
+          0.11962686399837974,
+          0.5
+        ]
+      }
+    },
+    {
+      "name": "mean_reversion_score",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.8563186237382717
+      }
+    },
+    {
+      "name": "trend_score",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.7718900262084187
+      }
+    },
+    {
+      "name": "price_velocity",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -0.003305074320961901,
+        "max": 0.0037796118331505533
+      }
+    },
+    {
+      "name": "price_acceleration",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -0.0028765944732344053,
+        "max": 0.003275890991002309
+      }
+    },
+    {
+      "name": "price_deceleration",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.0028765944732344053
+      }
+    },
+    {
+      "name": "rolling_momentum_5",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -0.016525371604809505,
+        "max": 0.018898059165752767
+      }
+    },
+    {
+      "name": "rolling_momentum_20",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -0.019777659284114787,
+        "max": 0.02306815621475224
+      }
+    },
+    {
+      "name": "momentum_persistence",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -0.8563186237382717,
+        "max": 0.7718900262084187
+      }
+    },
+    {
+      "name": "trend_persistence",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.95
+      }
+    },
+    {
+      "name": "realized_volatility",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.05968370031593604
+      }
+    },
+    {
+      "name": "historical_volatility",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.0364044007051314
+      }
+    },
+    {
+      "name": "volatility_expansion",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0995562143225151,
+        "max": 1.750000400829813
+      }
+    },
+    {
+      "name": "volatility_compression",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.5714284405453972,
+        "max": 10.044576391389015
+      }
+    },
+    {
+      "name": "atr_ratio",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.6013864167356876,
+        "max": 3.060144007317436
+      }
+    },
+    {
+      "name": "rolling_atr_20",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.00018412159939834246,
+        "max": 0.003360244489205224
+      }
+    },
+    {
+      "name": "volatility_regime",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "ob_bullish",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "ob_bearish",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "ob_bullish_top",
+      "dtype": "float64",
+      "nan_count": 51682,
+      "nan_rate": 0.5906379282759251,
+      "n_valid": 35820,
+      "is_label": false,
+      "value_range": {
+        "min": 0.9585,
+        "max": 1.18512
+      }
+    },
+    {
+      "name": "ob_bullish_bottom",
+      "dtype": "float64",
+      "nan_count": 51682,
+      "nan_rate": 0.5906379282759251,
+      "n_valid": 35820,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95819,
+        "max": 1.18505
+      }
+    },
+    {
+      "name": "ob_bearish_top",
+      "dtype": "float64",
+      "nan_count": 50815,
+      "nan_rate": 0.5807295833238098,
+      "n_valid": 36687,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95661,
+        "max": 1.18558
+      }
+    },
+    {
+      "name": "ob_bearish_bottom",
+      "dtype": "float64",
+      "nan_count": 50815,
+      "nan_rate": 0.5807295833238098,
+      "n_valid": 36687,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95635,
+        "max": 1.18523
+      }
+    },
+    {
+      "name": "ob_bullish_active",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "ob_bearish_active",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "price_in_bullish_ob",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "price_in_bearish_ob",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "bullish_liquidity_sweep",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "bearish_liquidity_sweep",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "liquidity_score",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 82.0
+      }
+    },
+    {
+      "name": "nearest_liquidity_distance",
+      "dtype": "float64",
+      "nan_count": 9,
+      "nan_rate": 0.00010285479189047107,
+      "n_valid": 87493,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.5623769135821142
+      }
+    },
+    {
+      "name": "nearest_buy_liquidity",
+      "dtype": "float64",
+      "nan_count": 11,
+      "nan_rate": 0.00012571141231057577,
+      "n_valid": 87491,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95643,
+        "max": 1.19185
+      }
+    },
+    {
+      "name": "nearest_sell_liquidity",
+      "dtype": "float64",
+      "nan_count": 20,
+      "nan_rate": 0.00022856620420104684,
+      "n_valid": 87482,
+      "is_label": false,
+      "value_range": {
+        "min": 0.95357,
+        "max": 1.1851
+      }
+    },
+    {
+      "name": "liquidity_age",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1668.0
+      }
+    },
+    {
+      "name": "touch_count",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "strong_sweep",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "weak_sweep",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "confirmed_sweep",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "sweep_strength",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 5.27640488986946
+      }
+    },
+    {
+      "name": "liquidity_cluster_size",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "sweep_penetration",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.7161890422078937
+      }
+    },
+    {
+      "name": "sweep_rejection",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.6123553974929379
+      }
+    },
+    {
+      "name": "liq_zone_width",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.059393499999999995
+      }
+    },
+    {
+      "name": "liq_zone_lifetime",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1668.0
+      }
+    },
+    {
+      "name": "num_nearby_liq_pools",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 20.0
+      }
+    },
+    {
+      "name": "return_vol_ratio",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": -5.023733909385594,
+        "max": 5.329586605924369
+      }
+    },
+    {
+      "name": "trend_quality",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.5945358547736871
+      }
+    },
+    {
+      "name": "noise_ratio",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.693635104591428
+      }
+    },
+    {
+      "name": "price_efficiency",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.15808834216079343,
+        "max": 0.5
+      }
+    },
+    {
+      "name": "regime_consistency",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.85
+      }
+    },
+    {
+      "name": "nearest_buy_liquidity_distance",
+      "dtype": "float64",
+      "nan_count": 123,
+      "nan_rate": 0.001405682155836438,
+      "n_valid": 87379,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 2.892804313383145
+      }
+    },
+    {
+      "name": "nearest_sell_liquidity_distance",
+      "dtype": "float64",
+      "nan_count": 175,
+      "nan_rate": 0.00199995428675916,
+      "n_valid": 87327,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 2.3523980709330523
+      }
+    },
+    {
+      "name": "nearest_liquidity_score",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 94.0510948905121
+      }
+    },
+    {
+      "name": "magnet_score",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 94.0510948905121
+      }
+    },
+    {
+      "name": "magnet_probability",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.940510948905121
+      }
+    },
+    {
+      "name": "liquidity_rank",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "target_liquidity",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.18787
+      }
+    },
+    {
+      "name": "distance_to_target",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.7411725079978273
+      }
+    },
+    {
+      "name": "buy_side_probability",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "sell_side_probability",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "liquidity_density",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          8.0
+        ]
+      }
+    },
+    {
+      "name": "cluster_strength",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ]
+      }
+    },
+    {
+      "name": "magnet_strength",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 94.0510948905121
+      }
+    },
+    {
+      "name": "nearest_cluster_size",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ]
+      }
+    },
+    {
+      "name": "proximity_contribution",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 55.0
+      }
+    },
+    {
+      "name": "age_contribution",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 10.0
+      }
+    },
+    {
+      "name": "touch_contribution",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          2.0,
+          4.0,
+          6.0,
+          8.0
+        ]
+      }
+    },
+    {
+      "name": "momentum_contribution",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "min": 0.0,
+        "max": 25.0
+      }
+    },
+    {
+      "name": "ranking_position",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          8.0,
+          9.0
+        ]
+      }
+    },
+    {
+      "name": "target_direction",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": false,
+      "value_range": {
+        "classes": [
+          -1.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "fwd_return_1b",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": true,
+      "value_range": {
+        "min": -0.01146532687902861,
+        "max": 0.016017554976193622
+      }
+    },
+    {
+      "name": "direction_1b",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "bias_1b",
+      "dtype": "float64",
+      "nan_count": 0,
+      "nan_rate": 0.0,
+      "n_valid": 87502,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "confidence_1b",
+      "dtype": "float64",
+      "nan_count": 19,
+      "nan_rate": 0.0002171378939909945,
+      "n_valid": 87483,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "probability_1b",
+      "dtype": "float64",
+      "nan_count": 19,
+      "nan_rate": 0.0002171378939909945,
+      "n_valid": 87483,
+      "is_label": true,
+      "value_range": {
+        "min": 4.5397868702434395e-05,
+        "max": 0.9999546021312976
+      }
+    },
+    {
+      "name": "fwd_return_3b",
+      "dtype": "float64",
+      "nan_count": 2,
+      "nan_rate": 2.2856620420104685e-05,
+      "n_valid": 87500,
+      "is_label": true,
+      "value_range": {
+        "min": -0.015502957044648913,
+        "max": 0.01770591899746771
+      }
+    },
+    {
+      "name": "direction_3b",
+      "dtype": "float64",
+      "nan_count": 2,
+      "nan_rate": 2.2856620420104685e-05,
+      "n_valid": 87500,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "bias_3b",
+      "dtype": "float64",
+      "nan_count": 2,
+      "nan_rate": 2.2856620420104685e-05,
+      "n_valid": 87500,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "confidence_3b",
+      "dtype": "float64",
+      "nan_count": 21,
+      "nan_rate": 0.0002399945144110992,
+      "n_valid": 87481,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "probability_3b",
+      "dtype": "float64",
+      "nan_count": 21,
+      "nan_rate": 0.0002399945144110992,
+      "n_valid": 87481,
+      "is_label": true,
+      "value_range": {
+        "min": 4.5397868702434395e-05,
+        "max": 0.9999546021312976
+      }
+    },
+    {
+      "name": "fwd_return_5b",
+      "dtype": "float64",
+      "nan_count": 4,
+      "nan_rate": 4.571324084020937e-05,
+      "n_valid": 87498,
+      "is_label": true,
+      "value_range": {
+        "min": -0.016525371604809564,
+        "max": 0.018898059165752646
+      }
+    },
+    {
+      "name": "direction_5b",
+      "dtype": "float64",
+      "nan_count": 4,
+      "nan_rate": 4.571324084020937e-05,
+      "n_valid": 87498,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "bias_5b",
+      "dtype": "float64",
+      "nan_count": 4,
+      "nan_rate": 4.571324084020937e-05,
+      "n_valid": 87498,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "confidence_5b",
+      "dtype": "float64",
+      "nan_count": 23,
+      "nan_rate": 0.00026285113483120385,
+      "n_valid": 87479,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "probability_5b",
+      "dtype": "float64",
+      "nan_count": 23,
+      "nan_rate": 0.00026285113483120385,
+      "n_valid": 87479,
+      "is_label": true,
+      "value_range": {
+        "min": 4.5397868702434395e-05,
+        "max": 0.9999203299279463
+      }
+    },
+    {
+      "name": "fwd_return_10b",
+      "dtype": "float64",
+      "nan_count": 9,
+      "nan_rate": 0.00010285479189047107,
+      "n_valid": 87493,
+      "is_label": true,
+      "value_range": {
+        "min": -0.016083108982059564,
+        "max": 0.022303983796363804
+      }
+    },
+    {
+      "name": "direction_10b",
+      "dtype": "float64",
+      "nan_count": 9,
+      "nan_rate": 0.00010285479189047107,
+      "n_valid": 87493,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "bias_10b",
+      "dtype": "float64",
+      "nan_count": 9,
+      "nan_rate": 0.00010285479189047107,
+      "n_valid": 87493,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "confidence_10b",
+      "dtype": "float64",
+      "nan_count": 28,
+      "nan_rate": 0.00031999268588146556,
+      "n_valid": 87474,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "name": "probability_10b",
+      "dtype": "float64",
+      "nan_count": 28,
+      "nan_rate": 0.00031999268588146556,
+      "n_valid": 87474,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0002301655797296629,
+        "max": 0.9997152474978971
+      }
+    },
+    {
+      "name": "long_outcome",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "long_outcome_bars",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 1.0,
+        "max": 50.0
+      }
+    },
+    {
+      "name": "long_mfe_pct",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.017954856361149144
+      }
+    },
+    {
+      "name": "long_mae_pct",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.01270065960855999
+      }
+    },
+    {
+      "name": "long_rr",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 1.9999999999982347,
+        "max": 2.000000000001693
+      }
+    },
+    {
+      "name": "short_outcome",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "short_outcome_bars",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 1.0,
+        "max": 50.0
+      }
+    },
+    {
+      "name": "short_mfe_pct",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.01393691307488561
+      }
+    },
+    {
+      "name": "short_mae_pct",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.01683998995227341
+      }
+    },
+    {
+      "name": "short_rr",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 1.9999999999982347,
+        "max": 2.000000000001693
+      }
+    },
+    {
+      "name": "outcome",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "outcome_bars",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 1.0,
+        "max": 50.0
+      }
+    },
+    {
+      "name": "mfe_pct",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.017954856361149144
+      }
+    },
+    {
+      "name": "mae_pct",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0,
+        "max": 0.01683998995227341
+      }
+    },
+    {
+      "name": "realized_rr",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 1.9999999999982347,
+        "max": 2.000000000001693
+      }
+    },
+    {
+      "name": "expected_reward_pct",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0002326452873434788,
+        "max": 0.007444262355132124
+      }
+    },
+    {
+      "name": "expected_risk_pct",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0001163226436717394,
+        "max": 0.003722131177566062
+      }
+    },
+    {
+      "name": "trade_duration_bars",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 1.0,
+        "max": 50.0
+      }
+    },
+    {
+      "name": "setup_quality",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0,
+          3.0
+        ]
+      }
+    },
+    {
+      "name": "setup_score",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0,
+        "max": 100.0
+      }
+    },
+    {
+      "name": "setup_mfe_mae_ratio",
+      "dtype": "float64",
+      "nan_count": 6,
+      "nan_rate": 6.856986126031404e-05,
+      "n_valid": 87496,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0,
+        "max": 1217676.5727518406
+      }
+    },
+    {
+      "name": "setup_achievable_rr",
+      "dtype": "float64",
+      "nan_count": 6,
+      "nan_rate": 6.856986126031404e-05,
+      "n_valid": 87496,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0,
+        "max": 9.61679775680618
+      }
+    },
+    {
+      "name": "entry_signal",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    {
+      "name": "optimal_entry_offset",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          -1.0,
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          8.0,
+          9.0
+        ]
+      }
+    },
+    {
+      "name": "time_to_entry",
+      "dtype": "float64",
+      "nan_count": 1487,
+      "nan_rate": 0.016993897282347833,
+      "n_valid": 86015,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          8.0,
+          9.0
+        ]
+      }
+    },
+    {
+      "name": "is_optimal_entry",
+      "dtype": "float64",
+      "nan_count": 49,
+      "nan_rate": 0.0005599872002925647,
+      "n_valid": 87453,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "mgmt_strategy",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          3.0
+        ]
+      }
+    },
+    {
+      "name": "mgmt_optimal_exit_bar",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": 0.0,
+        "max": 49.0
+      }
+    },
+    {
+      "name": "mgmt_max_r_multiple",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": -3.789782006690975,
+        "max": 12.99338670306258
+      }
+    },
+    {
+      "name": "mgmt_breakeven_bar",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": -1.0,
+        "max": 30.0
+      }
+    },
+    {
+      "name": "mgmt_trail_bar",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": -1.0,
+        "max": 48.0
+      }
+    },
+    {
+      "name": "mgmt_partial_exit_bar",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "min": -1.0,
+        "max": 44.0
+      }
+    },
+    {
+      "name": "mgmt_exit_type",
+      "dtype": "float64",
+      "nan_count": 55,
+      "nan_rate": 0.0006285570615528788,
+      "n_valid": 87447,
+      "is_label": true,
+      "value_range": {
+        "classes": [
+          0.0,
+          1.0,
+          2.0,
+          3.0
+        ]
+      }
+    }
+  ],
+  "class_distributions": {
+    "real_volume": {
+      "0": 87502
+    },
+    "is_bullish": {
+      "0": 43855,
+      "1": 43647
+    },
+    "is_bearish": {
+      "0": 44915,
+      "1": 42587
+    },
+    "inside_bar": {
+      "0": 76417,
+      "1": 11085
+    },
+    "outside_bar": {
+      "0": 78814,
+      "1": 8688
+    },
+    "higher_close_count": {
+      "5": 22426,
+      "4": 19097,
+      "6": 18123,
+      "3": 10150,
+      "7": 9811,
+      "2": 3364,
+      "8": 3179,
+      "9": 630,
+      "1": 612,
+      "0": 61,
+      "10": 49
+    },
+    "lower_close_count": {
+      "5": 22348,
+      "4": 19298,
+      "6": 17691,
+      "3": 11119,
+      "7": 8874,
+      "2": 3962,
+      "8": 2828,
+      "1": 775,
+      "9": 496,
+      "0": 61,
+      "10": 50
+    },
+    "higher_high_count": {
+      "5": 20299,
+      "4": 18216,
+      "6": 16404,
+      "3": 12162,
+      "7": 9125,
+      "2": 5247,
+      "8": 3391,
+      "1": 1462,
+      "9": 877,
+      "0": 232,
+      "10": 87
+    },
+    "lower_low_count": {
+      "5": 20078,
+      "4": 19360,
+      "6": 15108,
+      "3": 13045,
+      "7": 8161,
+      "2": 5898,
+      "8": 3122,
+      "1": 1650,
+      "9": 745,
+      "0": 241,
+      "10": 94
+    },
+    "fvg_bullish": {
+      "0": 78163,
+      "1": 9339
+    },
+    "fvg_bearish": {
+      "0": 78478,
+      "1": 9024
+    },
+    "fvg_bullish_active": {
+      "0": 60176,
+      "1": 27326
+    },
+    "fvg_bearish_active": {
+      "0": 61555,
+      "1": 25947
+    },
+    "pivot_high": {
+      "0": 82205,
+      "1": 5297
+    },
+    "pivot_low": {
+      "0": 82136,
+      "1": 5366
+    },
+    "major_pivot_high": {
+      "0": 85616,
+      "1": 1886
+    },
+    "major_pivot_low": {
+      "0": 85566,
+      "1": 1936
+    },
+    "minor_pivot_high": {
+      "0": 82205,
+      "1": 5297
+    },
+    "minor_pivot_low": {
+      "0": 82136,
+      "1": 5366
+    },
+    "higher_high": {
+      "0": 84850,
+      "1": 2652
+    },
+    "lower_high": {
+      "0": 84872,
+      "1": 2630
+    },
+    "higher_low": {
+      "0": 84750,
+      "1": 2752
+    },
+    "lower_low": {
+      "0": 84915,
+      "1": 2587
+    },
+    "trend": {
+      "0": 36188,
+      "1": 26545,
+      "-1": 24769
+    },
+    "ema_cross": {
+      "1": 44554,
+      "-1": 42947,
+      "0": 1
+    },
+    "ibos_bullish": {
+      "0": 86647,
+      "1": 855
+    },
+    "ibos_bearish": {
+      "0": 86708,
+      "1": 794
+    },
+    "ichoch_bullish": {
+      "0": 85748,
+      "1": 1754
+    },
+    "ichoch_bearish": {
+      "0": 85835,
+      "1": 1667
+    },
+    "bos_bullish": {
+      "0": 87048,
+      "1": 454
+    },
+    "bos_bearish": {
+      "0": 87057,
+      "1": 445
+    },
+    "choch_bullish": {
+      "0": 86709,
+      "1": 793
+    },
+    "choch_bearish": {
+      "0": 86716,
+      "1": 786
+    },
+    "structure_bias": {
+      "1": 43682,
+      "-1": 43661,
+      "0": 159
+    },
+    "eqh": {
+      "0": 85514,
+      "1": 1988
+    },
+    "eql": {
+      "0": 85451,
+      "1": 2051
+    },
+    "pd_zone": {
+      "-1": 40677,
+      "1": 39772,
+      "0": 7053
+    },
+    "rolling_entropy_5": {
+      "1.9219280948873623": 43088,
+      "2.321928094887362": 33315,
+      "1.5219280948873621": 5921,
+      "1.3709505944546687": 4754,
+      "0.7219280948873623": 222,
+      "0.9709505944546686": 198,
+      "1": 1,
+      "0": 1,
+      "1.584962500721156": 1,
+      "1.5": 1
+    },
+    "price_smoothness": {
+      "0": 87496,
+      "0.5": 3,
+      "0.06798935726150501": 1,
+      "0.027506724938661353": 1,
+      "0.11962686399837974": 1
+    },
+    "ob_bullish": {
+      "0": 86255,
+      "1": 1247
+    },
+    "ob_bearish": {
+      "0": 86271,
+      "1": 1231
+    },
+    "ob_bullish_active": {
+      "0": 51682,
+      "1": 35820
+    },
+    "ob_bearish_active": {
+      "0": 50815,
+      "1": 36687
+    },
+    "price_in_bullish_ob": {
+      "0": 84644,
+      "1": 2858
+    },
+    "price_in_bearish_ob": {
+      "0": 84457,
+      "1": 3045
+    },
+    "bullish_liquidity_sweep": {
+      "0": 83405,
+      "1": 4097
+    },
+    "bearish_liquidity_sweep": {
+      "0": 83394,
+      "1": 4108
+    },
+    "touch_count": {
+      "1": 56107,
+      "2": 31386,
+      "0": 9
+    },
+    "strong_sweep": {
+      "0": 87364,
+      "1": 138
+    },
+    "weak_sweep": {
+      "0": 79567,
+      "1": 7935
+    },
+    "confirmed_sweep": {
+      "0": 83505,
+      "1": 3997
+    },
+    "liquidity_cluster_size": {
+      "1": 56107,
+      "2": 31386,
+      "0": 9
+    },
+    "liquidity_rank": {
+      "1": 87157,
+      "0": 345
+    },
+    "liquidity_density": {
+      "1": 31894,
+      "2": 26514,
+      "0": 12737,
+      "3": 11778,
+      "4": 3502,
+      "5": 873,
+      "6": 166,
+      "7": 34,
+      "8": 4
+    },
+    "cluster_strength": {
+      "1": 51943,
+      "2": 33170,
+      "3": 1906,
+      "0": 345,
+      "4": 138
+    },
+    "nearest_cluster_size": {
+      "1": 54642,
+      "2": 31152,
+      "3": 1589,
+      "4": 110,
+      "0": 9
+    },
+    "touch_contribution": {
+      "2": 51943,
+      "4": 33170,
+      "6": 1906,
+      "0": 345,
+      "8": 138
+    },
+    "ranking_position": {
+      "1": 75246,
+      "2": 9347,
+      "3": 2105,
+      "4": 549,
+      "5": 148,
+      "6": 71,
+      "7": 18,
+      "0": 9,
+      "8": 8,
+      "9": 1
+    },
+    "target_direction": {
+      "1": 44354,
+      "-1": 42803,
+      "0": 345
+    },
+    "direction_1b": {
+      "1": 54777,
+      "2": 16408,
+      "0": 16317
+    },
+    "bias_1b": {
+      "0": 43968,
+      "1": 43534
+    },
+    "direction_3b": {
+      "1": 37721,
+      "2": 25107,
+      "0": 24672
+    },
+    "bias_3b": {
+      "1": 44001,
+      "0": 43499
+    },
+    "direction_5b": {
+      "1": 30458,
+      "2": 28876,
+      "0": 28164
+    },
+    "bias_5b": {
+      "1": 44161,
+      "0": 43337
+    },
+    "direction_10b": {
+      "2": 33443,
+      "0": 32035,
+      "1": 22015
+    },
+    "bias_10b": {
+      "1": 44328,
+      "0": 43165
+    },
+    "long_outcome": {
+      "2": 58251,
+      "1": 27708,
+      "0": 1488
+    },
+    "short_outcome": {
+      "2": 58088,
+      "1": 27881,
+      "0": 1478
+    },
+    "outcome": {
+      "2": 44283,
+      "1": 41335,
+      "0": 1829
+    },
+    "setup_quality": {
+      "3": 41335,
+      "0": 34814,
+      "1": 11249,
+      "2": 49
+    },
+    "entry_signal": {
+      "1": 49875,
+      "2": 36140,
+      "0": 1432
+    },
+    "optimal_entry_offset": {
+      "0": 36140,
+      "9": 10083,
+      "8": 7367,
+      "7": 5838,
+      "6": 4989,
+      "5": 4567,
+      "4": 4376,
+      "1": 4370,
+      "3": 4190,
+      "2": 4095,
+      "-1": 1432
+    },
+    "time_to_entry": {
+      "0": 36140,
+      "9": 10083,
+      "8": 7367,
+      "7": 5838,
+      "6": 4989,
+      "5": 4567,
+      "4": 4376,
+      "1": 4370,
+      "3": 4190,
+      "2": 4095
+    },
+    "is_optimal_entry": {
+      "0": 49935,
+      "1": 37518
+    },
+    "mgmt_strategy": {
+      "3": 44283,
+      "1": 43113,
+      "0": 51
+    },
+    "mgmt_exit_type": {
+      "1": 44177,
+      "0": 41335,
+      "3": 1829,
+      "2": 106
+    }
+  },
+  "feature_columns": [
+    "open",
+    "high",
+    "low",
+    "close",
+    "tick_volume",
+    "spread",
+    "real_volume",
+    "w1_timestamp",
+    "w1_open",
+    "w1_high",
+    "w1_low",
+    "w1_close",
+    "w1_tick_volume",
+    "d1_timestamp",
+    "d1_open",
+    "d1_high",
+    "d1_low",
+    "d1_close",
+    "d1_tick_volume",
+    "h4_timestamp",
+    "h4_open",
+    "h4_high",
+    "h4_low",
+    "h4_close",
+    "h4_tick_volume",
+    "h1_timestamp",
+    "h1_open",
+    "h1_high",
+    "h1_low",
+    "h1_close",
+    "h1_tick_volume",
+    "body_size",
+    "body_ratio",
+    "upper_wick",
+    "lower_wick",
+    "upper_wick_ratio",
+    "lower_wick_ratio",
+    "total_range",
+    "true_range",
+    "body_to_range_ratio",
+    "is_bullish",
+    "is_bearish",
+    "doji_score",
+    "marubozu_score",
+    "inside_bar",
+    "outside_bar",
+    "consecutive_bulls",
+    "consecutive_bears",
+    "higher_close_count",
+    "lower_close_count",
+    "higher_high_count",
+    "lower_low_count",
+    "fvg_bullish",
+    "fvg_bearish",
+    "fvg_bullish_top",
+    "fvg_bullish_bottom",
+    "fvg_bearish_top",
+    "fvg_bearish_bottom",
+    "fvg_bullish_active",
+    "fvg_bearish_active",
+    "fvg_bullish_age",
+    "fvg_bearish_age",
+    "pivot_high",
+    "pivot_low",
+    "major_pivot_high",
+    "major_pivot_low",
+    "minor_pivot_high",
+    "minor_pivot_low",
+    "higher_high",
+    "lower_high",
+    "higher_low",
+    "lower_low",
+    "swing_high_id",
+    "swing_low_id",
+    "swing_high_price",
+    "swing_low_price",
+    "swing_high_duration",
+    "swing_low_duration",
+    "swing_high_range",
+    "swing_low_range",
+    "swing_high_strength",
+    "swing_low_strength",
+    "trend",
+    "trend_duration",
+    "trend_strength",
+    "last_major_high",
+    "last_major_low",
+    "last_internal_high",
+    "last_internal_low",
+    "distance_to_last_major_high",
+    "distance_to_last_major_low",
+    "distance_to_last_internal_high",
+    "distance_to_last_internal_low",
+    "rsi",
+    "stochastic_k",
+    "stochastic_d",
+    "macd",
+    "macd_signal",
+    "macd_histogram",
+    "cci",
+    "williams_r",
+    "roc",
+    "price_momentum",
+    "tsi",
+    "ema9",
+    "ema20",
+    "ema50",
+    "ema100",
+    "ema200",
+    "sma20",
+    "sma50",
+    "sma100",
+    "wma20",
+    "hma20",
+    "ema_slope",
+    "ema_cross",
+    "log_return",
+    "simple_return",
+    "rolling_return_5",
+    "rolling_return_20",
+    "fwd_return_1",
+    "rolling_mean",
+    "rolling_median",
+    "rolling_var",
+    "rolling_std",
+    "rolling_min",
+    "rolling_max",
+    "rolling_q25",
+    "rolling_q75",
+    "rolling_mad",
+    "adx",
+    "plus_di",
+    "minus_di",
+    "aroon_up",
+    "aroon_down",
+    "aroon_oscillator",
+    "parabolic_sar",
+    "atr",
+    "normalized_atr",
+    "bb_upper",
+    "bb_lower",
+    "bb_width",
+    "bb_percent_b",
+    "kc_upper",
+    "kc_lower",
+    "dc_upper",
+    "dc_lower",
+    "chaikin_volatility",
+    "ibos_bullish",
+    "ibos_bearish",
+    "ichoch_bullish",
+    "ichoch_bearish",
+    "bos_bullish",
+    "bos_bearish",
+    "choch_bullish",
+    "choch_bearish",
+    "structure_bias",
+    "bars_since_structure_break",
+    "eqh",
+    "eqh_price",
+    "eql",
+    "eql_price",
+    "eqh_age",
+    "eql_age",
+    "pd_ratio",
+    "pd_equilibrium",
+    "pd_distance_from_eq",
+    "pd_zone",
+    "skewness",
+    "kurtosis",
+    "zscore",
+    "percentile_rank",
+    "normalized_price",
+    "price_rank",
+    "entropy",
+    "rolling_entropy_5",
+    "approximate_entropy",
+    "efficiency_ratio",
+    "hurst",
+    "fractal_dimension",
+    "market_noise",
+    "directional_efficiency",
+    "price_smoothness",
+    "mean_reversion_score",
+    "trend_score",
+    "price_velocity",
+    "price_acceleration",
+    "price_deceleration",
+    "rolling_momentum_5",
+    "rolling_momentum_20",
+    "momentum_persistence",
+    "trend_persistence",
+    "realized_volatility",
+    "historical_volatility",
+    "volatility_expansion",
+    "volatility_compression",
+    "atr_ratio",
+    "rolling_atr_20",
+    "volatility_regime",
+    "ob_bullish",
+    "ob_bearish",
+    "ob_bullish_top",
+    "ob_bullish_bottom",
+    "ob_bearish_top",
+    "ob_bearish_bottom",
+    "ob_bullish_active",
+    "ob_bearish_active",
+    "price_in_bullish_ob",
+    "price_in_bearish_ob",
+    "bullish_liquidity_sweep",
+    "bearish_liquidity_sweep",
+    "liquidity_score",
+    "nearest_liquidity_distance",
+    "nearest_buy_liquidity",
+    "nearest_sell_liquidity",
+    "liquidity_age",
+    "touch_count",
+    "strong_sweep",
+    "weak_sweep",
+    "confirmed_sweep",
+    "sweep_strength",
+    "liquidity_cluster_size",
+    "sweep_penetration",
+    "sweep_rejection",
+    "liq_zone_width",
+    "liq_zone_lifetime",
+    "num_nearby_liq_pools",
+    "return_vol_ratio",
+    "trend_quality",
+    "noise_ratio",
+    "price_efficiency",
+    "regime_consistency",
+    "nearest_buy_liquidity_distance",
+    "nearest_sell_liquidity_distance",
+    "nearest_liquidity_score",
+    "magnet_score",
+    "magnet_probability",
+    "liquidity_rank",
+    "target_liquidity",
+    "distance_to_target",
+    "buy_side_probability",
+    "sell_side_probability",
+    "liquidity_density",
+    "cluster_strength",
+    "magnet_strength",
+    "nearest_cluster_size",
+    "proximity_contribution",
+    "age_contribution",
+    "touch_contribution",
+    "momentum_contribution",
+    "ranking_position",
+    "target_direction"
+  ],
+  "label_columns": [
+    "fwd_return_1b",
+    "direction_1b",
+    "bias_1b",
+    "confidence_1b",
+    "probability_1b",
+    "fwd_return_3b",
+    "direction_3b",
+    "bias_3b",
+    "confidence_3b",
+    "probability_3b",
+    "fwd_return_5b",
+    "direction_5b",
+    "bias_5b",
+    "confidence_5b",
+    "probability_5b",
+    "fwd_return_10b",
+    "direction_10b",
+    "bias_10b",
+    "confidence_10b",
+    "probability_10b",
+    "long_outcome",
+    "long_outcome_bars",
+    "long_mfe_pct",
+    "long_mae_pct",
+    "long_rr",
+    "short_outcome",
+    "short_outcome_bars",
+    "short_mfe_pct",
+    "short_mae_pct",
+    "short_rr",
+    "outcome",
+    "outcome_bars",
+    "mfe_pct",
+    "mae_pct",
+    "realized_rr",
+    "expected_reward_pct",
+    "expected_risk_pct",
+    "trade_duration_bars",
+    "setup_quality",
+    "setup_score",
+    "setup_mfe_mae_ratio",
+    "setup_achievable_rr",
+    "entry_signal",
+    "optimal_entry_offset",
+    "time_to_entry",
+    "is_optimal_entry",
+    "mgmt_strategy",
+    "mgmt_optimal_exit_bar",
+    "mgmt_max_r_multiple",
+    "mgmt_breakeven_bar",
+    "mgmt_trail_bar",
+    "mgmt_partial_exit_bar",
+    "mgmt_exit_type"
+  ],
+  "validation_passed": true,
+  "validation_summary": "DatasetValidation: PASSED \u2014 6 passed, 9 warnings, 0 failures\n  [WARNING] feature_nan_rate: Feature 'fvg_bullish_top': 68.8% NaN > 50.0%.\n  [WARNING] feature_nan_rate: Feature 'fvg_bullish_bottom': 68.8% NaN > 50.0%.\n  [WARNING] feature_nan_rate: Feature 'fvg_bearish_top': 70.3% NaN > 50.0%.\n  [WARNING] feature_nan_rate: Feature 'fvg_bearish_bottom': 70.3% NaN > 50.0%.\n  [WARNING] feature_nan_rate: Feature 'ob_bullish_top': 59.1% NaN > 50.0%.\n  [WARNING] feature_nan_rate: Feature 'ob_bullish_bottom': 59.1% NaN > 50.0%.\n  [WARNING] feature_nan_rate: Feature 'ob_bearish_top': 58.1% NaN > 50.0%.\n  [WARNING] feature_nan_rate: Feature 'ob_bearish_bottom': 58.1% NaN > 50.0%.\n  [WARNING] dtype_consistency: Non-numeric features: ['w1_timestamp', 'd1_timestamp', 'h4_timestamp', 'h1_timestamp']",
+  "artefact_paths": {
+    "parquet": "C:\\Users\\ndlov\\Documents\\Research and Innovation\\Smart Trading\\data\\ml\\EURUSD\\training_dataset_EURUSD_v3.parquet",
+    "metadata": "C:\\Users\\ndlov\\Documents\\Research and Innovation\\Smart Trading\\data\\ml\\EURUSD\\training_dataset_EURUSD_v3_metadata.json"
+  },
+  "notes": ""
+}
