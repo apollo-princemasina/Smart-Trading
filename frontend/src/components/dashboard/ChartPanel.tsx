@@ -1,10 +1,28 @@
 'use client'
 import { useEffect, useRef } from 'react'
-import type { Candle } from '@/types'
+import type { Candle, Signal } from '@/types'
+import type { SeriesMarker, UTCTimestamp } from 'lightweight-charts'
 
-interface Props { candles: Candle[] }
+interface Props {
+  candles: Candle[]
+  signals: Signal[]
+}
 
-export default function ChartPanel({ candles }: Props) {
+function buildMarkers(signals: Signal[]): SeriesMarker<UTCTimestamp>[] {
+  return signals
+    .filter(s => s.direction === 'BUY' || s.direction === 'SELL')
+    .map(s => ({
+      time:     Math.floor(new Date(s.signal_time).getTime() / 1000) as UTCTimestamp,
+      position: s.direction === 'BUY' ? ('belowBar' as const) : ('aboveBar' as const),
+      color:    s.direction === 'BUY' ? '#10B981' : '#EF4444',
+      shape:    s.direction === 'BUY' ? ('arrowUp' as const) : ('arrowDown' as const),
+      text:     `${s.direction} ${Math.round(s.confidence * 100)}%`,
+      size:     2,
+    }))
+    .sort((a, b) => (a.time as number) - (b.time as number))
+}
+
+export default function ChartPanel({ candles, signals }: Props) {
   const ref = useRef<HTMLDivElement>(null)
   const chartRef = useRef<import('lightweight-charts').IChartApi | null>(null)
   const seriesRef = useRef<import('lightweight-charts').ISeriesApi<'Candlestick'> | null>(null)
@@ -52,7 +70,7 @@ export default function ChartPanel({ candles }: Props) {
   useEffect(() => {
     if (candles.length === 0) return
     const data = candles.map((c) => ({
-      time:  Math.floor(new Date(c.timestamp).getTime() / 1000) as import('lightweight-charts').UTCTimestamp,
+      time:  Math.floor(new Date(c.timestamp).getTime() / 1000) as UTCTimestamp,
       open:  c.open,
       high:  c.high,
       low:   c.low,
@@ -61,13 +79,21 @@ export default function ChartPanel({ candles }: Props) {
     const trySet = () => {
       if (seriesRef.current) {
         seriesRef.current.setData(data)
+        // Apply markers immediately after data is set
+        seriesRef.current.setMarkers(buildMarkers(signals))
         chartRef.current?.timeScale().fitContent()
       } else {
         setTimeout(trySet, 100)
       }
     }
     trySet()
-  }, [candles])
+  }, [candles]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Update markers whenever signals list changes (new WebSocket signal, initial load)
+  useEffect(() => {
+    if (!seriesRef.current) return
+    seriesRef.current.setMarkers(buildMarkers(signals))
+  }, [signals])
 
   return (
     <div className="flex flex-col h-full">

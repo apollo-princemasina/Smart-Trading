@@ -95,7 +95,7 @@ export default function Dashboard() {
 
         {/* Centre — Chart */}
         <div className="flex-1 overflow-hidden bg-bg">
-          <ChartPanel candles={candles} />
+          <ChartPanel candles={candles} signals={history} />
         </div>
 
         {/* Right — Signal card */}
