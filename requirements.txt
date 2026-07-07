@@ -28,6 +28,9 @@ alembic>=1.13
 # ── HTTP Client ───────────────────────────────────────────────
 httpx>=0.27
 
+# ── WebSocket Client (Deriv live data) ────────────────────────
+websockets>=12.0
+
 # ── Scheduling ────────────────────────────────────────────────
 apscheduler>=3.10
 
@@ -37,6 +40,17 @@ loguru>=0.7
 # ── Config / Environment ──────────────────────────────────────
 python-dotenv>=1.0
 
+# ── Date/Time Parsing (FF Connector — EST→UTC conversion) ─────
+python-dateutil>=2.9
+
+# ── AI Provider (MIA — Market Intelligence AI Layer) ──────────
+groq>=0.9.0
+
+# ── Auth (Phase 6 — JWT + password hashing) ───────────────────
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+
 # ── Testing ───────────────────────────────────────────────────
 pytest>=8.0
 pytest-asyncio>=0.23
+httpx>=0.27

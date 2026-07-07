@@ -4,8 +4,12 @@ import { useEffect, useState } from 'react'
 export type KillzoneName =
   | 'ASIAN'
   | 'LONDON OPEN'
+  | 'LONDON'
   | 'NY OPEN'
   | 'LONDON CLOSE'
+  | 'NEW YORK'
+  | 'PRE-LONDON'
+  | 'NY CLOSE'
   | 'DEAD ZONE'
   | 'MARKET CLOSED'
 
@@ -17,7 +21,7 @@ export interface Killzone {
   description: string
 }
 
-// ICT killzones in UTC hours (fixed — no DST adjustment, works year-round for EURUSD)
+// ICT killzones + full session coverage in UTC hours
 const ZONES: Array<{ name: KillzoneName; start: number; end: number; color: string; utcRange: string; description: string }> = [
   {
     name: 'ASIAN',
@@ -28,12 +32,28 @@ const ZONES: Array<{ name: KillzoneName; start: number; end: number; color: stri
     description: 'Range formation, liquidity build-up',
   },
   {
+    name: 'PRE-LONDON',
+    start: 4,
+    end: 7,
+    color: '#6B7280',
+    utcRange: '04:00 – 07:00',
+    description: 'European pre-market, building positioning',
+  },
+  {
     name: 'LONDON OPEN',
     start: 7,
     end: 10,
     color: '#3B82F6',
     utcRange: '07:00 – 10:00',
     description: 'Highest volatility window for EURUSD',
+  },
+  {
+    name: 'LONDON',
+    start: 10,
+    end: 12,
+    color: '#60A5FA',
+    utcRange: '10:00 – 12:00',
+    description: 'Active London session — institutional flow ongoing',
   },
   {
     name: 'NY OPEN',
@@ -50,6 +70,22 @@ const ZONES: Array<{ name: KillzoneName; start: number; end: number; color: stri
     color: '#F59E0B',
     utcRange: '15:00 – 17:00',
     description: 'Retracement / position unwind zone',
+  },
+  {
+    name: 'NEW YORK',
+    start: 17,
+    end: 20,
+    color: '#34D399',
+    utcRange: '17:00 – 20:00',
+    description: 'New York session continuation, still active',
+  },
+  {
+    name: 'NY CLOSE',
+    start: 20,
+    end: 22,
+    color: '#9CA3AF',
+    utcRange: '20:00 – 22:00',
+    description: 'New York winding down, reduced volume',
   },
 ]
 
@@ -83,8 +119,8 @@ function getKillzone(now: Date): Killzone {
     name: 'DEAD ZONE',
     active: false,
     color: '#4B5563',
-    utcRange: '04:00 – 07:00 / 17:00+',
-    description: 'Low institutional participation',
+    utcRange: '22:00 – 00:00',
+    description: 'Thin liquidity, wide spreads',
   }
 }
 
@@ -102,7 +138,10 @@ export function getSignalImportance(
   if (killzone.name === 'LONDON OPEN' || killzone.name === 'NY OPEN') {
     return { label: 'PRIME SETUP', color: '#F0B429', glow: true }
   }
-  return { label: 'HIGH', color: '#3B82F6', glow: false }
+  if (killzone.name === 'LONDON' || killzone.name === 'NEW YORK') {
+    return { label: 'ACTIVE SESSION', color: '#3B82F6', glow: false }
+  }
+  return { label: 'REDUCED', color: '#6B7280', glow: false }
 }
 
 export function useKillzone() {

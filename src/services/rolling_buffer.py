@@ -3,9 +3,9 @@
 Architecture
 ------------
 - One deque per timeframe, maxlen = configured buffer size.
-- On startup: loads restart cache if fresh, otherwise downloads from Twelve Data.
+- On startup: loads restart cache if fresh, otherwise downloads from MT5.
 - On update (every M15 close): fetches last 2 candles per timeframe, appends
-  the confirmed-closed one (index 1), oldest auto-drops from deque.
+  the confirmed-closed one (index 0), oldest auto-drops from deque.
 - On shutdown: saves buffer to transient parquet cache files.
 - All downstream modules call as_dataframe() — never touch buffers directly.
 
@@ -27,7 +27,7 @@ from src.api.core.config import settings
 
 class RollingBufferManager:
 
-    _SYMBOL = "EUR/USD"   # Twelve Data requires slash notation for FX
+    _SYMBOL = "EURUSD"    # MT5 symbol format — no slash
 
     def __init__(self) -> None:
         self._sizes: dict[str, int] = settings.buffer_sizes
@@ -40,47 +40,33 @@ class RollingBufferManager:
     # ── Startup ───────────────────────────────────────────────────────────────
 
     async def initialise(self) -> None:
-        """Populate all buffers.  Tries cache first, falls back to Twelve Data."""
+        """Populate all buffers.  Tries cache first, falls back to MT5."""
         loaded = await self.load_cache()
         if loaded:
             logger.info("Rolling buffers restored from restart cache")
         else:
-            logger.info("Downloading rolling buffers from Twelve Data...")
+            logger.info("Downloading rolling buffers from Deriv...")
             await self._download_all()
 
     async def _download_all(self) -> None:
-        import asyncio
-        from src.services.twelve_data_client import TwelveDataClient
-        client = TwelveDataClient()
+        from src.services.deriv_client import DerivClient
+        client = DerivClient()
         frames = await client.fetch_all_timeframes(self._SYMBOL, self._sizes)
-        failed: list[str] = []
         for tf, df in frames.items():
             if df.empty:
-                logger.warning("Buffer for {} is empty after download — will retry", tf)
-                failed.append(tf)
+                logger.warning("Buffer for {} is empty after Deriv download", tf)
                 continue
+            # Drop the last bar — Deriv includes the currently-open bar whose
+            # OHLC is not final. The scheduler will add it once it closes.
+            if len(df) > 1:
+                df = df.iloc[:-1]
             for row in df.to_dict("records"):
                 self._buffers[tf].append(row)
             self._ready[tf] = True
         logger.info(
-            "Buffers populated: {}",
+            "Buffers populated (last open bar excluded): {}",
             {tf: len(buf) for tf, buf in self._buffers.items()},
         )
-        if failed:
-            logger.info("Retrying {} failed TFs after 65-second rate-limit backoff", len(failed))
-            await asyncio.sleep(65)
-            for tf in failed:
-                try:
-                    df = await client.fetch_candles(self._SYMBOL, tf, outputsize=self._sizes[tf])
-                    if not df.empty:
-                        for row in df.to_dict("records"):
-                            self._buffers[tf].append(row)
-                        self._ready[tf] = True
-                        logger.info("Retry OK for {} — {} bars", tf, len(self._buffers[tf]))
-                    else:
-                        logger.warning("Retry failed for {} — buffer empty", tf)
-                except Exception as exc:
-                    logger.warning("Retry error for {}: {}", tf, exc)
 
     # ── Per-cycle update (called by scheduler) ───────────────────────────────
 
@@ -94,30 +80,35 @@ class RollingBufferManager:
         Returns a dict of {tf: updated} indicating which buffers got a new row.
         W1 is skipped on every tick (changes weekly, not every 15 min).
         """
-        from src.services.twelve_data_client import TwelveDataClient
-        client = TwelveDataClient()
+        from src.services.deriv_client import DerivClient
+        client = DerivClient()
         updated: dict[str, bool] = {}
 
         for tf in self._TICK_UPDATE_TFS:
             try:
-                # Fetch 2 candles: [newest (possibly open)] + [confirmed closed]
+                # Fetch 2 candles sorted ascending: [confirmed-closed, currently-open]
+                # iloc[-2] = second-to-last = the bar that just confirmed closed
+                # iloc[-1] = last = the currently-open bar (discard — OHLC not final)
                 df = await client.fetch_candles(self._SYMBOL, tf, outputsize=2)
                 if len(df) < 2:
                     updated[tf] = False
                     continue
 
-                # Index 0 = oldest = the bar that just closed
-                new_candle = df.iloc[0].to_dict()
+                confirmed = df.iloc[-2].to_dict()  # the just-closed bar
                 existing_ts = (
                     self._buffers[tf][-1]["timestamp"]
                     if self._buffers[tf]
                     else None
                 )
 
-                # Only append if it's a genuinely new bar
-                new_ts = new_candle["timestamp"]
-                if existing_ts is None or new_ts > existing_ts:
-                    self._buffers[tf].append(new_candle)
+                new_ts = confirmed["timestamp"]
+                if existing_ts is None or new_ts >= existing_ts:
+                    # >= so we also replace a startup bar that was open and is now closed
+                    if existing_ts is not None and new_ts == existing_ts:
+                        # Same timestamp: replace last bar with final OHLC
+                        self._buffers[tf][-1] = confirmed
+                    else:
+                        self._buffers[tf].append(confirmed)
                     self._ready[tf] = True
                     updated[tf] = True
                     logger.debug("Buffer updated  tf={}  ts={}", tf, new_ts)

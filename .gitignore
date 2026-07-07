@@ -53,3 +53,13 @@ Thumbs.db
 
 # ── Misc runtime ─────────────────────────────────────────────────────────────
 *.joblib.bak
+
+# ── Claude Code local state ───────────────────────────────────────────────────
+.claude/
+
+# ── Runtime caches ───────────────────────────────────────────────────────────
+data/ff_cache/
+data/buffer_cache/
+
+# ── TypeScript build artifacts ────────────────────────────────────────────────
+frontend/tsconfig.tsbuildinfo

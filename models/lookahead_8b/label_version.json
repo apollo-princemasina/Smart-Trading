@@ -1,0 +1,10 @@
+{
+  "target_column": "direction_8b",
+  "task_type": "classification",
+  "n_classes": 3,
+  "class_names": {
+    "0": "SELL",
+    "1": "HOLD",
+    "2": "BUY"
+  }
+}

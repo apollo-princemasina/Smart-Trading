@@ -2,22 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── CSS custom properties ───────────────────────────────────────────── */
+:root {
+  --font-inter:     'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono:      'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, 'Courier New', monospace;
 
-body {
-  background: #0D1117;
-  color: #E6EDF3;
-  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
-  font-size: 13px;
-  line-height: 1.5;
-  overflow: hidden;
+  --color-bg:       #070C14;
+  --color-surface:  #0D1827;
+  --color-elevated: #111D2E;
+  --color-border:   #1E2D40;
+  --color-gold:     #F0B429;
+  --color-buy:      #10B981;
+  --color-sell:     #F87171;
+  --color-wait:     #FBBF24;
 }
 
-::-webkit-scrollbar { width: 4px; height: 4px; }
-::-webkit-scrollbar-track { background: #0D1117; }
-::-webkit-scrollbar-thumb { background: #30363D; border-radius: 2px; }
+/* ── Reset ───────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
 
-.bull  { color: #10B981; }
-.bear  { color: #EF4444; }
-.hold  { color: #F59E0B; }
-.muted { color: #6B7280; }
+/* ── Base ────────────────────────────────────────────────────────────── */
+html { height: 100%; }
+
+body {
+  height: 100%;
+  background-color: var(--color-bg);
+  color: #EDF2F7;
+  font-family: var(--font-inter);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#__next { height: 100%; }
+
+/* ── Scrollbar ───────────────────────────────────────────────────────── */
+::-webkit-scrollbar          { width: 3px; height: 3px; }
+::-webkit-scrollbar-track    { background: transparent; }
+::-webkit-scrollbar-thumb    { background: #1E2D40; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2A3F58; }
+
+/* ── Mono numerics ───────────────────────────────────────────────────── */
+.num    { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.label  { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #4B5D74; }
+.caption{ font-size: 0.7rem; color: #7C8EA6; }
+
+/* ── Decision badge utilities ────────────────────────────────────────── */
+.badge-buy  { color: #10B981; background: #022C22; border: 1px solid #065F46; }
+.badge-sell { color: #F87171; background: #2D0A0A; border: 1px solid #991B1B; }
+.badge-wait { color: #FBBF24; background: #2D1A00; border: 1px solid #92400E; }
+
+/* ── Regime badge utilities ──────────────────────────────────────────── */
+.badge-manipulation  { color: #A78BFA; background: #1E0A3C; border: 1px solid #5B21B6; }
+.badge-expansion     { color: #60A5FA; background: #0A1E3C; border: 1px solid #1D4ED8; }
+.badge-consolidation { color: #9CA3AF; background: #111827; border: 1px solid #374151; }
+
+/* ── Glass card ──────────────────────────────────────────────────────── */
+.glass {
+  background: rgba(13, 24, 39, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ── Highlight pulse (live data update) ─────────────────────────────── */
+@keyframes highlight-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(240, 180, 41, 0.3); }
+  50%  { box-shadow: 0 0 0 6px rgba(240, 180, 41, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(240, 180, 41, 0); }
+}
+.highlight-update { animation: highlight-pulse 0.8s ease-out; }
+
+/* ── Decision glow ───────────────────────────────────────────────────── */
+@keyframes buy-glow {
+  0%, 100% { box-shadow: 0 0 12px rgba(16, 185, 129, 0.15); }
+  50%       { box-shadow: 0 0 24px rgba(16, 185, 129, 0.3);  }
+}
+@keyframes sell-glow {
+  0%, 100% { box-shadow: 0 0 12px rgba(248, 113, 113, 0.15); }
+  50%       { box-shadow: 0 0 24px rgba(248, 113, 113, 0.3);  }
+}
+.glow-buy  { animation: buy-glow  2s ease-in-out infinite; }
+.glow-sell { animation: sell-glow 2s ease-in-out infinite; }
+
+/* ── Live dot pulse ──────────────────────────────────────────────────── */
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.85); }
+}
+.live-dot { animation: livePulse 1.8s ease-in-out infinite; }
+
+/* ── Fade in ─────────────────────────────────────────────────────────── */
+@keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-in  { animation: fadeIn  0.3s ease-out; }
+.animate-slide-up { animation: slideUp 0.25s ease-out; }
+
+/* ── Divider ─────────────────────────────────────────────────────────── */
+.divider { width: 100%; height: 1px; background: #1E2D40; }
+
+/* ── Force overflow hidden on the dashboard grid ────────────────────── */
+.dashboard-layout { overflow: hidden; }

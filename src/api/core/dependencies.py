@@ -62,3 +62,33 @@ def get_scheduler(request: Request):
 
 def get_health_monitor(request: Request):
     return request.app.state.health_monitor
+
+
+# ── Application Backend service providers (Phase 6) ──────────────────────────
+
+def get_dashboard_service(request: Request):
+    return request.app.state.dashboard_service
+
+
+def get_decision_service(request: Request):
+    return request.app.state.decision_service
+
+
+def get_settings_service(request: Request):
+    return request.app.state.settings_service
+
+
+def get_model_registry_service(request: Request):
+    return request.app.state.model_registry_service
+
+
+def get_history_service(request: Request):
+    return request.app.state.history_service
+
+
+def get_notification_service(request: Request):
+    return request.app.state.notification_service
+
+
+def get_system_health_service(request: Request):
+    return request.app.state.system_health_service

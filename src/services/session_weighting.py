@@ -22,18 +22,25 @@ class SessionInfo:
     active: bool       # True = inside a killzone
 
 
-# Multipliers chosen conservatively:
-#   London/NY open: full model conviction (these sessions generated most training signals)
-#   Asian: slightly reduced (EUR/USD range-building, direction less reliable)
-#   London Close: moderate (often mean-reversion, can trap directional trades)
-#   Dead Zone: significant reduction (low volume, false moves, spread widens)
+# Multipliers by session quality:
+#   ICT Killzones (LONDON_OPEN, NY_OPEN): maximum institutional participation → 1.00
+#   Extended active sessions: still liquid, slightly less concentrated → 0.88–0.92
+#   Asian / pre-London / NY close: range-building or winding down → 0.72–0.82
+#   Dead Zone (22:00-00:00): genuinely thin, spread widens → 0.60 (fallback)
 _SESSIONS = [
     # (utc_start_inclusive, utc_end_exclusive, name, multiplier, active)
-    (7,  10, "LONDON_OPEN",   1.00, True),
-    (12, 15, "NY_OPEN",       1.00, True),
-    (0,  4,  "ASIAN",         0.80, True),
-    (15, 17, "LONDON_CLOSE",  0.82, True),
-    # Dead zones — everything else
+    # ── ICT Killzones — highest conviction ───────────────────────────────────
+    (7,  10, "LONDON_OPEN",   1.00, True),   # London open killzone
+    (12, 15, "NY_OPEN",       1.00, True),   # New York open killzone
+    # ── Extended active sessions ──────────────────────────────────────────────
+    (10, 12, "LONDON",        0.92, True),   # Mid-London — still very active
+    (15, 17, "LONDON_CLOSE",  0.85, True),   # London close / early NY overlap
+    (17, 20, "NEW_YORK",      0.88, True),   # NY session continuation
+    # ── Lower-activity windows ────────────────────────────────────────────────
+    (0,  4,  "ASIAN",         0.80, True),   # Asian killzone
+    (4,  7,  "PRE_LONDON",    0.70, False),  # Pre-London buildup
+    (20, 22, "NY_CLOSE",      0.72, False),  # NY winding down
+    # 22:00–00:00 → DEAD_ZONE fallback (0.60, active=False)
 ]
 
 

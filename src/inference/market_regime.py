@@ -83,6 +83,11 @@ class RegimeReport:
     ob_active:         bool
     ob_direction:      str              # "BULLISH" | "BEARISH" | "NONE"
     in_order_block:    bool
+    # OB price levels — exact zone of the most recent active OB (None if no OB)
+    ob_bullish_top:    Optional[float]
+    ob_bullish_bottom: Optional[float]
+    ob_bearish_top:    Optional[float]
+    ob_bearish_bottom: Optional[float]
 
     # ── Supporting evidence ───────────────────────────────────────────────────
     consolidation_signals: list[RegimeSignal] = field(default_factory=list)
@@ -186,6 +191,22 @@ def analyze_market_regime(
     ob_bear_act    = get_bool("ob_bearish_active")
     in_bull_ob     = get_bool("price_in_bullish_ob")
     in_bear_ob     = get_bool("price_in_bearish_ob")
+
+    # OB price bands (NaN → None)
+    def get_price(col: str) -> Optional[float]:
+        v = get(col)
+        if v is None:
+            return None
+        try:
+            f = float(v)
+            return None if (f != f) else round(f, 5)  # nan check
+        except Exception:
+            return None
+
+    ob_bullish_top    = get_price("ob_bullish_top")
+    ob_bullish_bottom = get_price("ob_bullish_bottom")
+    ob_bearish_top    = get_price("ob_bearish_top")
+    ob_bearish_bottom = get_price("ob_bearish_bottom")
 
     # Derived booleans
     liquidity_sweep = bull_sweep or bear_sweep
@@ -399,6 +420,10 @@ def analyze_market_regime(
         ob_active              = ob_active,
         ob_direction           = ob_direction,
         in_order_block         = in_order_block,
+        ob_bullish_top         = ob_bullish_top,
+        ob_bullish_bottom      = ob_bullish_bottom,
+        ob_bearish_top         = ob_bearish_top,
+        ob_bearish_bottom      = ob_bearish_bottom,
         consolidation_signals  = con_sigs,
         expansion_signals      = exp_sigs,
         manipulation_signals   = man_sigs,

@@ -1,0 +1,71 @@
+{
+  "manifest_version": "1.0.0",
+  "bundle_type": "inference_pipeline",
+  "model_name": "lookahead_8b",
+  "is_complete": true,
+  "required_files": [
+    "model.joblib",
+    "preprocessing.joblib",
+    "feature_order.json",
+    "selected_features.json",
+    "schema_version.json",
+    "label_version.json",
+    "model_metadata.json",
+    "optimization_results.json",
+    "training_metrics.json",
+    "inference_config.json",
+    "pipeline_manifest.json"
+  ],
+  "files": [
+    {
+      "filename": "model.joblib",
+      "sha256": "bccb3f4fe4a993fbaaa41df4997bc317928f583c80848aecfe897cad8d73b18d",
+      "size_bytes": 1887835
+    },
+    {
+      "filename": "preprocessing.joblib",
+      "sha256": "865927b399e2002797a56fd34a3ef262495db940d18cbd9941e4b5bc71690e2e",
+      "size_bytes": 3585
+    },
+    {
+      "filename": "feature_order.json",
+      "sha256": "bd93ac8ace3f63c54804d98cae41b15631f85d4011cc402ffb4b4fdf4b959e60",
+      "size_bytes": 4967
+    },
+    {
+      "filename": "selected_features.json",
+      "sha256": "47346276db7bb44dcc68ce3caa627ed5b94148704fc011ecdd370c63b070c367",
+      "size_bytes": 5538
+    },
+    {
+      "filename": "schema_version.json",
+      "sha256": "1f0c11c2879b0c0b9c23e8ef0ee356035af7a49880ab2592625c1333b72ffab8",
+      "size_bytes": 118
+    },
+    {
+      "filename": "label_version.json",
+      "sha256": "289c0c977b4f5232f15385628f52fea7ae524f95c9675efe97a91c4bfd12d1bd",
+      "size_bytes": 170
+    },
+    {
+      "filename": "model_metadata.json",
+      "sha256": "75842190551a2496f33bda285829b92a3f26a6a628f0bede4fbbb395eb8feac4",
+      "size_bytes": 6974
+    },
+    {
+      "filename": "optimization_results.json",
+      "sha256": "3b8a67641d224d9af2bb9ee7b217ec96ad9055f9b611c24a8cfa2cc91bec27dd",
+      "size_bytes": 449
+    },
+    {
+      "filename": "training_metrics.json",
+      "sha256": "da0ab74d1f10155207395679321e508d3fdccc9380a6cd5872ce6512a68124cb",
+      "size_bytes": 150
+    },
+    {
+      "filename": "inference_config.json",
+      "sha256": "30a75e29c9e7c46a410a7c72fae3878c45621a50be9553a3323cb6e1d617f323",
+      "size_bytes": 5849
+    }
+  ]
+}

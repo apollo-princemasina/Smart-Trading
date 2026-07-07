@@ -16,6 +16,15 @@ class PredictionRepository(BaseRepository[Prediction]):
     def __init__(self, session: AsyncSession) -> None:
         super().__init__(Prediction, session)
 
+    async def exists_for_signal_time(self, signal_time: datetime, symbol: str = "EURUSD") -> bool:
+        result = await self.session.execute(
+            select(Prediction.id)
+            .where(Prediction.symbol == symbol)
+            .where(Prediction.signal_time == signal_time)
+            .limit(1)
+        )
+        return result.scalars().first() is not None
+
     async def latest(self, symbol: str = "EURUSD") -> Prediction | None:
         result = await self.session.execute(
             select(Prediction)

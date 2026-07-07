@@ -78,20 +78,36 @@ class Settings(BaseSettings):
     TWELVE_DATA_SYMBOL:  str = "EUR/USD"  # Twelve Data API format requires slash
 
     # ── Inference ─────────────────────────────────────────────────────────────
-    INFERENCE_MIN_CONFIDENCE: float = 0.60
-    INFERENCE_SPREAD_FILL:    int   = 15      # 1.5 pips (Twelve Data omits FX spread)
-    INFERENCE_TP_ATR_MULT:    float = 3.0
-    INFERENCE_SL_ATR_MULT:    float = 1.5
+    INFERENCE_MIN_CONFIDENCE:    float = 0.60
+    INFERENCE_SPREAD_FILL:       int   = 15      # 1.5 pips (Twelve Data omits FX spread)
+    INFERENCE_TP_ATR_MULT:       float = 3.0
+    INFERENCE_SL_ATR_MULT:       float = 1.5
+    # Strategy B gate: require all 3 models to agree (HIGH_CONVICTION) before
+    # emitting a directional signal.  SETUP_FORMING is surfaced as an alert field
+    # but direction stays HOLD so no trade fires.
+    INFERENCE_REQUIRE_CONVICTION: bool  = True
 
     # ── Scheduler ────────────────────────────────────────────────────────────
     # Cron expression for M15 bar close: fire at :01 past every 15-min mark
     # (1-minute delay gives the candle time to finalise on Twelve Data's side)
     SCHEDULER_M15_CRON: str = "1,16,31,46 * * * *"
 
-    # ── MT5 (kept for reference / future use) ────────────────────────────────
+    # ── Deriv WebSocket API ───────────────────────────────────────────────────
+    # App ID 1 = public test app (fine for single-user dev/staging).
+    # For production with multiple users: register an app at developers.deriv.com
+    # (requires Admin-scope token), then set DERIV_APP_ID=<your_id> in .env.
+    DERIV_APP_ID: int = 1
+
+    # ── MT5 (Windows local dev only — not used on Railway) ───────────────────
     MT5_LOGIN:    int = 0
     MT5_PASSWORD: str = ""
     MT5_SERVER:   str = ""
+
+    # ── Auth (Phase 6 — foundation) ───────────────────────────────────────────
+    # SECRET_KEY (above) is reused for JWT signing.
+    JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int  = 30
+    JWT_REFRESH_TOKEN_EXPIRE_DAYS:   int  = 7
+    AUTH_ENABLED:                    bool = False
 
     # ── Derived helpers ───────────────────────────────────────────────────────
     @property

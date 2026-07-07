@@ -4,7 +4,7 @@ from __future__ import annotations
 import uuid
 from datetime import datetime, timezone
 
-from sqlalchemy import DateTime, Float, Index, Integer, String, Text
+from sqlalchemy import DateTime, Float, Index, Integer, String, Text, UniqueConstraint
 from sqlalchemy.dialects.postgresql import UUID as PG_UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.types import JSON
@@ -64,6 +64,7 @@ class Prediction(Base):
     )
 
     __table_args__ = (
+        UniqueConstraint("signal_time", "symbol", name="uq_prediction_signal_time_symbol"),
         Index("ix_predictions_symbol_timeframe", "symbol", "timeframe"),
         Index("ix_predictions_direction", "direction"),
     )
